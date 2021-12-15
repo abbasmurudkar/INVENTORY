@@ -13,7 +13,7 @@
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.2"
   },
-  "scripts": {
+  "scripts":{
     "predeploy":"npm run build",
     "deploy":"gh-pages -d build",
     "start": "react-scripts start",
