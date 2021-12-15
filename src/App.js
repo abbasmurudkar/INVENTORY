@@ -2,7 +2,7 @@
 function App() {
   return (
     < >
-
+        THIS IS APP COMPONENT
     </>
   );
 }
