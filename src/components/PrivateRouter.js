@@ -7,5 +7,4 @@ function PrivateRouter() {
         </div>
     )
 }
-
 export default PrivateRouter

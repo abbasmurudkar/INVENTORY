@@ -7,5 +7,4 @@ function PublicRouter() {
         </div>
     )
 }
-
 export default PublicRouter
