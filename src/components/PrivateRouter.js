@@ -1,10 +1,11 @@
 import React from 'react'
 
-function StartupPage() {
+function PrivateRouter() {
     return (
         <div>
             
         </div>
     )
 }
-export default StartupPage
+
+export default PrivateRouter

@@ -1,10 +1,11 @@
 import React from 'react'
 
-function StartupPage() {
+function PublicRouter() {
     return (
         <div>
             
         </div>
     )
 }
-export default StartupPage
+
+export default PublicRouter
