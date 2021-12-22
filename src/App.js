@@ -5,7 +5,7 @@ import StartupPage from "./pages/StartupPage";
 function App() {
   return (
     <Switch>
-      <Route exact path="/startup">
+      <Route exact path="/">
      <StartupPage/>
       </Route>
     </Switch>
