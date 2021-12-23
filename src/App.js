@@ -5,13 +5,11 @@ import 'rsuite/dist/styles/rsuite-default.css';
 
 function App() {
   return (
-   
     <Switch>
       <Route exact path="/">
      <StartupPage/>
       </Route>
     </Switch>
-
   );
 }
 export default App;

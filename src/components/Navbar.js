@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Icon } from 'rsuite';
+import {  Button, Icon } from 'rsuite';
 import styled from 'styled-components'
 
 function Navbar() {
@@ -15,8 +15,11 @@ function Navbar() {
         {
             text: "Contact",
             icon:"user"
+        },
+        {
+            text: "support",
+            icon:"users"
         }
-
     ]
     return (
         <Nav>
@@ -27,35 +30,44 @@ function Navbar() {
                    {NavMenu.map((Nav , Key)=> {
                        return(
                            <div className='Nav_Menu' key={Key}>
-                               <Icon icon={Nav? Nav.icon : "logo"}/>{Nav.text}
-                               {console.log(Nav)}
+                               <Icon id="icon" icon={Nav? Nav.icon : "logo"}/> <span>{Nav.text}</span>
                            </div>
-                       )
-                   })
-                }
+                       )})}
+                       <Button color="red">SignIn</Button>
             </div>
         </Nav>
     )
 }
-
 export default Navbar
-
 const Nav = styled.div`
 display: flex;
 flex-direction: row;
 text-align: center;
-border: 2px solid red; 
+/* border: 2px solid red;  */
 color: white;
 justify-content: space-between;
 align-items: center;
-padding: 5px 29px;
+padding: 15px 29px;
 .Nav_Logo{
-border: 2px solid grey;
+/* border: 2px solid grey; */
 }
 .Nav_Navigation{
 display: flex;
 justify-content: space-around;
-border: 2px solid green;
-
+/* border: 2px solid green; */
+    .Nav_Menu{
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        /* border: 2px solid; */
+        padding: 6px 10px;
+        margin-right: 8px ;
+        #icon{
+            font-size: 16px;
+        }
+        span{
+            font-size:18px;
+        }
+    }
 }
 `;
