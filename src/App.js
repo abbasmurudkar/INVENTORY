@@ -4,11 +4,13 @@ import StartupPage from "./pages/StartupPage";
 
 function App() {
   return (
+   
     <Switch>
       <Route exact path="/">
      <StartupPage/>
       </Route>
     </Switch>
+
   );
 }
 export default App;
