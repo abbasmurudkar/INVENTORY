@@ -17,7 +17,7 @@ function Navbar() {
             icon:"user"
         },
         {
-            text: "support",
+            text: "Support",
             icon:"users"
         }
     ]
@@ -43,7 +43,7 @@ const Nav = styled.div`
 display: flex;
 flex-direction: row;
 text-align: center;
-/* border: 2px solid red;  */
+/* border: 2px solid red;*/
 color: white;
 justify-content: space-between;
 align-items: center;
