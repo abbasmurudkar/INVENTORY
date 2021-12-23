@@ -1,11 +1,15 @@
 import React from 'react'
 import BACKGROUND_IMAGE from '../Assets/bg6.jpeg'
 import styled from 'styled-components'
+import Navbar from './Navbar'
 
 function Banner() {
     return (
         <Background>
+            <div>
             
+            <Navbar/>
+            </div>
         </Background>
     )
 }
