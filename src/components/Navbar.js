@@ -35,8 +35,7 @@ function Navbar() {
                        return(
                            <div className='Nav_Menu' key={Key}>
                                <Icon id="icon" icon={Nav? Nav.icon : "logo"}/> <span>{Nav.text}</span>
-                           </div>
-                           
+                           </div>                           
                        )})}
                        <div className='Nav_btn'>
                        <Button color="orange">SignIn</Button>
