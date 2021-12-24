@@ -1,46 +1,48 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import {  Button, Icon } from 'rsuite';
+import { Button, Icon } from 'rsuite';
 import styled from 'styled-components';
 import WEBSITE_LOGO from '../Assets/logo.png'
 
-function Navbar() {
+function Navbar(props) {
     const NavMenu = [
         {
-           text: "Home",
-           icon: "home",                 
+            text: "Home",
+            icon: "home",
         },
         {
             text: "About",
-            icon:"adjust"
+            icon: "adjust"
         },
         {
             text: "Contact",
-            icon:"address-book"
+            icon: "address-book"
         },
         {
             text: "Support",
-            icon:"user"
+            icon: "user"
         }
+
     ]
     return (
         <Nav>
             <div className='Nav_Logo'>
                 <Link to="/">
-               <img src={WEBSITE_LOGO} alt="Loading"/><span>ROOZ</span>
-               </Link>
+                    <img src={WEBSITE_LOGO} alt="Loading" /><span>{props.title}</span>
+                </Link>
             </div>
             <div className='Nav_Navigation'>
-                   {NavMenu.map((Nav , Key)=> {
-                       return(
-                           <div className='Nav_Menu' key={Key}>
-                               <Icon id="icon" icon={Nav? Nav.icon : "logo"}/> <span>{Nav.text}</span>
-                           </div>                           
-                       )})}
-                       <div className='Nav_btn'>
-                       <Button color="orange">SignIn</Button>
-                       <Button color='orange'>Register</Button>
-                       </div>
+                {NavMenu.map((Nav, Key) => {
+                    return (
+                        <div className='Nav_Menu' key={Key}>
+                            <Icon id="icon" icon={Nav ? Nav.icon : "logo"} /> <span>{Nav.text}</span>
+                        </div>
+                    )
+                })}
+                <div className='Nav_btn'>
+                    <Button color="orange">SignIn</Button>
+                    <Button color='orange'>Register</Button>
+                </div>
             </div>
         </Nav>
     )
@@ -50,6 +52,7 @@ const Nav = styled.div`
 display: flex;
 flex-direction: row;
 text-align: center;
+position: sticky; 
 /* border: 2px solid red;*/
 color: white;
 justify-content: space-between;

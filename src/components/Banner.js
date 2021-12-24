@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import Navbar from './Navbar'
 
 function Banner() {
+    const title = "ROOZ"
     return (
         <Background>
             <div>
-            <Navbar/>
+            <Navbar title={title}/>
             </div>
         </Background>
     )
