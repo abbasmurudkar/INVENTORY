@@ -48,7 +48,7 @@ function Navbar(props) {
     )
 }
 export default Navbar
-const Nav = styled.div`
+export const Nav = styled.div`
 display: flex;
 flex-direction: row;
 text-align: center;
