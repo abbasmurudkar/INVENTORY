@@ -59,6 +59,7 @@ justify-content: space-between;
 align-items: center;
 padding: 15px 29px;
     .Nav_Logo{
+        user-select:none;
         cursor: pointer;
             a{
                 text-decoration: none;
@@ -85,6 +86,7 @@ padding: 15px 29px;
     justify-content: space-around;
     padding: 10px 10px;
         .Nav_Menu{
+            user-select:none;
             display: block;
             text-align: center;
             cursor: pointer;

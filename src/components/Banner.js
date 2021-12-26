@@ -31,11 +31,12 @@ height: 700px;
 `;
 const Text = styled.div`
 display: flex;
-justify-content: center;
+/* justify-content: center; */
 align-items: center;
-border: 2px solid red;
+/* border: 2px solid red; */
 width: 100%;
 height: 500px;
 color: white;
+padding-left: 10%;
 ;
 `
