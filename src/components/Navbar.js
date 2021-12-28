@@ -68,7 +68,7 @@ padding: 15px 29px;
                 width: 60px;
                 height: 60px;
             }
-            span{
+            span{ 
                 font-size: 40px;
                 position: relative;
                 top: 15px;
