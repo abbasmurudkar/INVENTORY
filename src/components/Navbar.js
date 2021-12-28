@@ -31,7 +31,7 @@ function Navbar(props) {
                     <img src={WEBSITE_LOGO} alt="Loading" /><span>{props.title}</span>
                 </Link>
             </div>
-            <div className='Nav_Navigation'>
+             <div className='Nav_Navigation'>
                 {NavMenu.map((Nav, Key) => {
                     return (
                         <div className='Nav_Menu' key={Key}>
@@ -43,7 +43,7 @@ function Navbar(props) {
                     <Button color="orange">SignIn</Button>
                     <Button color='orange'>Register</Button>
                 </div>
-            </div>
+            </div> 
         </Nav>
     )
 }
@@ -53,13 +53,14 @@ display: flex;
 flex-direction: row;
 text-align: center;
 position: sticky; 
-/* border: 2px solid red;*/
 color: white;
 justify-content: space-between;
 align-items: center;
 padding: 15px 29px;
+/* border: 2px solid red; */
     .Nav_Logo{
         user-select:none;
+        /* border: 2px solid green; */
         cursor: pointer;
             a{
                 text-decoration: none;
@@ -85,7 +86,9 @@ padding: 15px 29px;
     display: flex;
     justify-content: space-around;
     padding: 10px 10px;
+    /* border: 2px solid green; */
         .Nav_Menu{
+            /* border: 2px solid; */
             user-select:none;
             display: block;
             text-align: center;
@@ -107,6 +110,7 @@ padding: 15px 29px;
         }
     }
     .Nav_btn{
+        /* border: 2px solid green; */
         Button{
             margin-right: 5px;
             height: 32px;

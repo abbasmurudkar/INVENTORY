@@ -9,12 +9,12 @@ function Banner() {
     return (
         <Background>
             {/* ------ NAVBAR------ */}
-            <Navbar title={title}/>
+            <Navbar title={title} />
             {/* --- NAVBAR ENDS ----*/}
 
             {/* --- TEXT-SECTION--- */}
             <Text>
-            <BannerText/>
+                <BannerText head={"ONE PLATFORM MULTIPLLE"} head1={"MULTIPLE INVESTEMENT."} summary={"Don`t Let The Fear Of Losing Be Greater Then Excitement Of Winning."} />
             </Text>
         </Background>
     )
