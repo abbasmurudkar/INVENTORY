@@ -4,7 +4,7 @@ import { Button, Icon } from 'rsuite';
 import styled from 'styled-components';
 import WEBSITE_LOGO from '../Assets/logo.png'
 
-function Navbar(props) {
+function Navbar({title, section}) {
     const NavMenu = [
         {
             text: "Home",
@@ -28,14 +28,14 @@ function Navbar(props) {
         <Nav>
             <div className='Nav_Logo'>
                 <Link to="/">
-                    <img src={WEBSITE_LOGO} alt="Loading" /><span>{props.title}</span>
+                    <img src={WEBSITE_LOGO} alt="Loading" /><span>{title}</span>
                 </Link>
             </div>
              <div className='Nav_Navigation'>
                 {NavMenu.map((Nav, Key) => {
                     return (
                         <div className='Nav_Menu' key={Key}>
-                            <Icon id="icon" icon={Nav ? Nav.icon : "logo"} /> <span>{Nav.text}</span>
+                            <Icon id="icon" icon={Nav ? Nav.icon : "logo"} onClick={section} /> <span>{Nav.text}</span>
                         </div>
                     )
                 })}
@@ -57,10 +57,8 @@ color: white;
 justify-content: space-between;
 align-items: center;
 padding: 15px 29px;
-/* border: 2px solid red; */
     .Nav_Logo{
         user-select:none;
-        /* border: 2px solid green; */
         cursor: pointer;
             a{
                 text-decoration: none;
@@ -86,9 +84,7 @@ padding: 15px 29px;
     display: flex;
     justify-content: space-around;
     padding: 10px 10px;
-    /* border: 2px solid green; */
         .Nav_Menu{
-            /* border: 2px solid; */
             user-select:none;
             display: block;
             text-align: center;
@@ -110,7 +106,6 @@ padding: 15px 29px;
         }
     }
     .Nav_btn{
-        /* border: 2px solid green; */
         Button{
             margin-right: 5px;
             height: 32px;

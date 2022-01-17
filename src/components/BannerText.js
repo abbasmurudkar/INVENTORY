@@ -15,6 +15,7 @@ function BannerText(props) {
                 </div>
                 <div className='Nav_Btn'>
                 <Button >Get Started Now <Icon icon="play2"/></Button>
+                <Button >Get Started Now <Icon icon="play2"/></Button>
                 </div>
                 </Fades>
             </TextBanner>
@@ -25,41 +26,38 @@ function BannerText(props) {
 export default BannerText
 
 const TextBanner = styled.div`
-/* border: 2px solid green; */
 width: 50vw;
 height: 400px;
 display: flex;
 justify-content: center;
-/* align-items: center; */
 flex-direction: column;
 .Nav_Head{
-    /* border: 2px solid ; */
     user-select:none;
+    display: block;
+    text-align: center;
     h1{
       font-weight: 500;
     }
-    p{
-        color: #c4990c;
-        font-size:60px ;
-        display: inline-block;
-    }
 }
 .Nav_Text{
-    /* border:2px solid white; */
     margin-top: 12px;
     color: #c4990c;
     font-size: 19px;
     user-select:none;
     font-weight: bolder;
+    display: block;
+    text-align: center;
 }
 .Nav_Btn{
-    /* border: 2px solid white; */
     display: inline-block;
     margin-top: 20px;
+    display: block;
+    text-align: center;
     Button{
         font-size: 20px;
-        color: black;
-        background-color:#e5a023; 
+        color: white;
+        background-color:#e5a023;
+        margin-right :30px ;
     }
 }
 `;
