@@ -10,7 +10,7 @@ function Banner(props) {
         <Background>
            
             {/* ------ NAVBAR------ */}
-            <Navbar title={title} section = {props.section1} />
+            <Navbar title={title}/>
             {/* --- NAVBAR ENDS ----*/}
 
             {/* --- TEXT-SECTION--- */}

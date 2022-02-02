@@ -4,7 +4,7 @@ import { Button, Icon } from 'rsuite';
 import styled from 'styled-components';
 import WEBSITE_LOGO from '../../../Assets/logo.png'
 
-function Navbar({title, section}) {
+function Navbar({title}) {
     const NavMenu = [
         {
             text: "Home",
@@ -50,13 +50,14 @@ function Navbar({title, section}) {
 export default Navbar
 export const Nav = styled.div`
 display: flex;
-flex-direction: row;
-text-align: center;
-/* position: sticky;  */
 color: white;
-justify-content: space-between;
+justify-content: space-between; 
+padding: 15px 29px; 
 align-items: center;
-padding: 15px 29px;
+background: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
     .Nav_Logo{
         user-select:none;
         cursor: pointer;
