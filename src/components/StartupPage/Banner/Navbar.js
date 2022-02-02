@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Button, Icon } from 'rsuite';
 import styled from 'styled-components';
-import WEBSITE_LOGO from '../Assets/logo.png'
+import WEBSITE_LOGO from '../../../Assets/logo.png'
 
 function Navbar({title, section}) {
     const NavMenu = [
@@ -35,7 +35,7 @@ function Navbar({title, section}) {
                 {NavMenu.map((Nav, Key) => {
                     return (
                         <div className='Nav_Menu' key={Key}>
-                            <Icon id="icon" icon={Nav ? Nav.icon : "logo"} onClick={section} /> <span>{Nav.text}</span>
+                            <Icon id="icon" icon={Nav ? Nav.icon : "logo"}/> <span>{Nav.text}</span>
                         </div>
                     )
                 })}
@@ -52,7 +52,7 @@ export const Nav = styled.div`
 display: flex;
 flex-direction: row;
 text-align: center;
-position: sticky; 
+/* position: sticky;  */
 color: white;
 justify-content: space-between;
 align-items: center;

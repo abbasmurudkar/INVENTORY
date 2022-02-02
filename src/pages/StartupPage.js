@@ -1,20 +1,20 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import About from '../components/About';
-import Banner from '../components/Banner';
+import About from '../components/StartupPage/ABOUT/About';
+import Banner from '../components/StartupPage/Banner/Banner';
 function StartupPage() {
-    const AboutSection = useRef(null)
+    // const AboutSection = useRef(null)
 
-    const gotoAboutSection = () =>{
-        window.scrollTo({
-            top: AboutSection.current.offsetTop, 
-            behavior: 'smooth'
-        })
-    }
+    // const gotoAboutSection = () =>{
+    //     window.scrollTo({
+    //         top: AboutSection.current.offsetTop, 
+    //         behavior: 'smooth'
+    //     })
+    // }
     return (
         <FrontPage>
-               <Banner section1 = {()=>gotoAboutSection}/>
-               <About ref = {AboutSection}/>
+               <Banner/>
+               <About/>
         </FrontPage>
     )
 }

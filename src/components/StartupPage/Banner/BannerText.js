@@ -15,7 +15,6 @@ function BannerText(props) {
                 </div>
                 <div className='Nav_Btn'>
                 <Button >Get Started Now <Icon icon="play2"/></Button>
-                <Button >Get Started Now <Icon icon="play2"/></Button>
                 </div>
                 </Fades>
             </TextBanner>
