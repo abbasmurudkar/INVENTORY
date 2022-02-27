@@ -5,6 +5,7 @@ function About(props) {
 
   return (
     <Abouts>
+
       <div className='headm'>
         <h2>Why invest with Brooz?</h2>
         <div className='herd'>
