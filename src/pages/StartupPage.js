@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import About from '../components/StartupPage/ABOUT/About';
 import Banner from '../components/StartupPage/Banner/Banner';
+import Footer from '../components/StartupPage/FOOTER/Footer';
 function StartupPage() {
     // const AboutSection = useRef(null)
 
@@ -15,6 +16,7 @@ function StartupPage() {
         <FrontPage>
                <Banner/>
                <About/>
+               <Footer/>
         </FrontPage>
     )
 }

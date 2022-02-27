@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button, Icon } from 'rsuite';
 import styled from 'styled-components';
 import WEBSITE_LOGO from '../../../Assets/logo.png'
+import About from '../ABOUT/About';
 
 function Navbar({title}) {
     const NavMenu = [
@@ -25,6 +26,8 @@ function Navbar({title}) {
 
     ]
     return (
+        
+
         <Nav>
             <div className='Nav_Logo'>
                 <Link to="/">
@@ -43,8 +46,9 @@ function Navbar({title}) {
                     <Button color="orange">SignIn</Button>
                     <Button color='orange'>Register</Button>
                 </div>
-            </div> 
+            </div>            
         </Nav>
+        
     )
 }
 export default Navbar
@@ -54,10 +58,12 @@ color: white;
 justify-content: space-between; 
 padding: 15px 29px; 
 align-items: center;
-background: transparent;
-    position: sticky;
-    top: 0;
-    z-index: 100; 
+background: #182552;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 2px 2px 15px #e5a023;
     .Nav_Logo{
         user-select:none;
         cursor: pointer;
@@ -71,7 +77,7 @@ background: transparent;
             span{ 
                 font-size: 40px;
                 position: relative;
-                top: 15px;
+                top: 10px;
                 right: 5px;
                 transition: 0.3s all ease-in-out;
                 color: white;
@@ -89,6 +95,7 @@ background: transparent;
             user-select:none;
             display: block;
             text-align: center;
+            padding: 20px 10px;
             cursor: pointer;
             padding: 6px 10px;
             margin-right: 8px ;
@@ -108,6 +115,7 @@ background: transparent;
     }
     .Nav_btn{
         Button{
+            cursor: pointer;
             margin-right: 5px;
             height: 32px;
             line-height: 0;

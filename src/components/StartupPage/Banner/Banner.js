@@ -31,13 +31,13 @@ background-size:  cover;
 background-position: center;
 height: 750px;
 `;
-
 const Text = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 width: 100%;
-height: 500px;
+height: 750px;
+position: relative;
 color: white;
-;
+/* border: 2px solid green; */
 `;
