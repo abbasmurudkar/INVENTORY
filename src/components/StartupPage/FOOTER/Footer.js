@@ -13,6 +13,7 @@ function Footer() {
                             <p>4th Block, S.T Bed, Koramangala</p>
                             <p>Bengaluru – 560034</p>
                         </div>
+                       
                     </div>
                     <List item1={"Stocks"} item2={"Future & Options"}  item3={"Mutual Funds"}  item4={"Fixed Deposit"}  item5={"US Stocks"}  item6={"Stocks"} head={"Products"}/>
                     <List item1={"About Us"} item2={"Pricing"}  item3={"Blog"}  item4={"Media & Press"}  item5={"Careers"}  item6={"Help and Supports"} head={"BROOZ"}/>
@@ -39,6 +40,7 @@ background-color: #1e2232;
 color: white;
 width: 100%;
 height: 420px;
+margin-top: 25px;
 .footer-column{
 display: flex;
     .Info-column{

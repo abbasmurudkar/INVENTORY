@@ -29,6 +29,7 @@ width: 100%;
 background-image:linear-gradient(to top,rgb(0 0 0 / 52%),rgb(47 49 114 / 73%)),url(${BACKGROUND_IMAGE}); 
 background-size:  cover;
 background-position: center;
+background-attachment: fixed;
 height: 750px;
 `;
 const Text = styled.div`

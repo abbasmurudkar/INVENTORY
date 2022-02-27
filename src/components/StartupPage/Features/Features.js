@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Circle from '../../../styles/Circle';
 
 function Features() {
     return (
@@ -11,6 +12,10 @@ function Features() {
             <div className='mixed'>
                 <div className='first'>
                  <img className='first-image' src="https://files.coinswitch.co/ui/public/images/kuber-asset.png?version=2021081913" alt=""/>
+                 <div>
+                 <Circle/><br/><br/><br/>
+                 <Circle/>
+                 </div>
                 </div>
 
                 <div className='second'>
@@ -89,8 +94,10 @@ margin-top: 50px;
 }
 
 .first{
-    margin-left: 10%;
-
+    /* margin-left: 10%; */
+display: flex;
+justify-content: space-between;
+width: 700px;
 }
 .first-image{
     width: 100%;
@@ -98,13 +105,11 @@ margin-top: 50px;
     object-fit: contain;
 }
 
-
 .second{
-    margin-left: 20%;
+    margin-left: 10%;
     /* text-align: right; */
    
 }
-
 .second-image{
   width: 60px;
    object-fit: contain;

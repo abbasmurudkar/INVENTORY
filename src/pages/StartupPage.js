@@ -19,7 +19,7 @@ function StartupPage() {
                <About/>
                <Features/>
                <Footer/>
-
+        
         </FrontPage>
     )
 }
@@ -27,4 +27,5 @@ export default StartupPage
 
 const FrontPage = styled.div`
 height: 100vh;
+
 `;
