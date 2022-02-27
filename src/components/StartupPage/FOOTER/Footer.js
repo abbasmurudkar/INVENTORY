@@ -1,7 +1,6 @@
 import React from 'react'
 import WEBSITE_LOGO from '../../../Assets/logo.png'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import List from './List'
 function Footer() {
     return (

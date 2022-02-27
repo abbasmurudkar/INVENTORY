@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Button, Icon } from 'rsuite';
 import styled from 'styled-components';
 import WEBSITE_LOGO from '../../../Assets/logo.png'
-import About from '../ABOUT/About';
 
 function Navbar({title}) {
     const NavMenu = [
