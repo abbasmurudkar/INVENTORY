@@ -5,28 +5,34 @@ import styled from 'styled-components';
 import WEBSITE_LOGO from '../../../Assets/logo.png'
 
 function Navbar({title}) {
-    const NavMenu = [
+     const NavMenu = [
         {
+            id:"1",
             text: "Home",
             icon: "home",
+            url:"#home"
         },
         {
+            id:"2",
             text: "About",
-            icon: "adjust"
+            icon: "adjust",
+            url:"#About"
         },
         {
+            id:"3",
             text: "Contact",
-            icon: "address-book"
+            icon: "address-book",
+            url:"#Contact"
         },
         {
+            id:"4",
             text: "Support",
-            icon: "user"
+            icon: "user",
+            url:"#Support"
         }
 
     ]
     return (
-        
-
         <Nav>
             <div className='Nav_Logo'>
                 <Link to="/">
@@ -37,7 +43,10 @@ function Navbar({title}) {
                 {NavMenu.map((Nav, Key) => {
                     return (
                         <div className='Nav_Menu' key={Key}>
-                            <Icon id="icon" icon={Nav ? Nav.icon : "logo"}/> <span>{Nav.text}</span>
+                           <a href={Nav.url} key={Nav.id} > 
+                           <Icon id="icon" icon={Nav ? Nav.icon : "logo"}/> 
+                           <span>{Nav.text}</span> 
+                           </a>
                         </div>
                     )
                 })}
@@ -47,7 +56,6 @@ function Navbar({title}) {
                 </div>
             </div>            
         </Nav>
-        
     )
 }
 export default Navbar
@@ -83,7 +91,6 @@ background: #182552;
             }
     &:hover span{
         color: #c4990c;
-       
     }
 }
 .Nav_Navigation{
@@ -109,7 +116,6 @@ background: #182552;
         span{
             font-size:18px;
             font-weight: 600;
-           
         }
     }
     .Nav_btn{

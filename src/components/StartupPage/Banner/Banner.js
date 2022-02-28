@@ -7,10 +7,10 @@ import BannerText from './BannerText'
 function Banner(props) {
     const title = "ROOZ"
     return (
-        <Background>
+        <Background id="home">
            
             {/* ------ NAVBAR------ */}
-            <Navbar title={title}/>
+            {/* <Navbar title={title}/> */}
             {/* --- NAVBAR ENDS ----*/}
 
             {/* --- TEXT-SECTION--- */}
