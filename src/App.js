@@ -4,7 +4,6 @@ import StartupPage from "./pages/StartupPage";
 import 'rsuite/dist/styles/rsuite-default.css'
 import './styles/main.scss'
 import './App.css'
-import Navbar from "./components/StartupPage/Banner/Navbar";
 function App() {
   return (
     <Switch>
