@@ -13,8 +13,8 @@ function Features() {
                 <div className='first'>
                  <img className='first-image' src="https://files.coinswitch.co/ui/public/images/kuber-asset.png?version=2021081913" alt=""/>
                  <div>
-                 <Circle/><br/><br/><br/>
-                 <Circle/>
+                 <Circle text={"50%"}/><br/><br/><br/>
+                 <Circle text={"50%"}/>
                  </div>
                 </div>
 

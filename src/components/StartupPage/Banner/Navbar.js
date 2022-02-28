@@ -59,7 +59,7 @@ padding: 15px 29px;
 align-items: center;
 background: #182552;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     width: 100%;
     border-radius: 30px;
     box-shadow: 2px 2px 15px #e5a023;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function Circle() {
+function Circle(props) {
   return (
       <Circlesoption>
 
@@ -9,7 +9,7 @@ function Circle() {
             
     <svg class="rail" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
     <circle cx="100" cy="100" r="80"/>
-    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="100px" font-family="Arial" dy=".3em">BC</text>    
+    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="50px" font-family="Arial" dy=".3em">{props.text}</text>    
     </svg>
     <svg
     class="bar"
