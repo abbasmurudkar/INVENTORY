@@ -50,8 +50,12 @@ function Navbar({title}) {
                 })}
               
             <div className='Nav_btn'>
+                <Link to="/signin">
                     <Button color="orange">SignIn</Button>
+                </Link>
+                <Link to="/signin">
                     <Button color='orange'>Register</Button>
+                </Link>
                 </div>         
             </div>   
         </Nav>
