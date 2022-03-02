@@ -7,7 +7,7 @@ import BACKGROUND_IMAGE1 from "../../../Assets/stocks.png"
 import BACKGROUND_IMAGE2 from "../../../Assets/mf.png"
 import BACKGROUND_IMAGE3 from "../../../Assets/ipo.png"
 import BACKGROUND_IMAGE4 from "../../../Assets/futures.png"
-import BACKGROUND_VIDEO from "../../../Assets/bg12.jpeg"
+import BACKGROUND_VIDEO from "../../../Assets/bg6.jpeg"
 
 
 function Abouttabs() {
@@ -64,12 +64,12 @@ function Abouttabs() {
                     <div key={index}>
                         <TabPanel className="Panel">
 
-                            <h2 style={{ position: "relative", display: "block", padding: "20px", fontWeight: "900", color:"#bde1ff" }}>{t.Head}</h2>
+                            <h2 style={{ position: "relative", display: "block", padding: "20px", fontWeight: "900", color:"#cfe6f9" }}>{t.Head}</h2>
                             <img style={{ position: "relative", left: "550px", display: "inline-block", width: "300px", top: "-45px" }} src={t.background} alt="Loading" />
                             <div className="tabs-text">
-                                <p style={{ fontSize: "20px" , fontWeight:"400", color:"#ebe1c1"}}><Icon style={{ fontSize: "22px", paddingRight: "10px" }} icon={t.icon} /> {t.para1}</p>
-                                <p style={{ fontSize: "20px" ,fontWeight:"400", color:"#ebe1c1"}}><Icon style={{ fontSize: "22px", paddingRight: "10px" }} icon={t.icon} /> {t.para2}</p>
-                                <p style={{ fontSize: "20px",fontWeight:"400" , color:"#ebe1c1"}}><Icon style={{ fontSize: "22px", paddingRight: "10px" }} icon={t.icon} /> {t.para3}</p>
+                                <p style={{ fontSize: "25px" , fontWeight:"400", color:"#ebe1c1"}}><Icon style={{ fontSize: "22px", paddingRight: "10px" }} icon={t.icon} /> {t.para1}</p>
+                                <p style={{ fontSize: "25px" ,fontWeight:"400", color:"#ebe1c1"}}><Icon style={{ fontSize: "22px", paddingRight: "10px" }} icon={t.icon} /> {t.para2}</p>
+                                <p style={{ fontSize: "25px",fontWeight:"400" , color:"#ebe1c1"}}><Icon style={{ fontSize: "22px", paddingRight: "10px" }} icon={t.icon} /> {t.para3}</p>
                             </div>
                         </TabPanel>
                     </div>
@@ -81,7 +81,7 @@ function Abouttabs() {
 }
 export default Abouttabs;
 const TabsComponent = styled.div`
-background-image: url(${BACKGROUND_VIDEO});
+background-image:linear-gradient(to top,rgb(0 0 0 / 52%),rgb(47 49 114 / 73%)), url(${BACKGROUND_VIDEO});
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
@@ -102,11 +102,12 @@ video{
 margin-top: 80px;
 h2{
     margin-bottom: 16px;
-    color: #bde1ff;;
+    color: #cfe6f9;
+    font-size: 45px;
 }
 p{
     color: #ebe1c1;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 32px;
     display: block;
     text-align: center;

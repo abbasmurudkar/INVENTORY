@@ -43,18 +43,17 @@ function Navbar({title}) {
                 {NavMenu.map((Nav, Key) => {
                     return (
                         <div className='Nav_Menu' key={Key}>
-                           <a href={Nav.url} key={Nav.id} > 
                            <Icon id="icon" icon={Nav ? Nav.icon : "logo"}/> 
                            <span>{Nav.text}</span> 
-                           </a>
                         </div>
                     )
                 })}
-                <div className='Nav_btn'>
+              
+            <div className='Nav_btn'>
                     <Button color="orange">SignIn</Button>
                     <Button color='orange'>Register</Button>
-                </div>
-            </div>            
+                </div>         
+            </div>   
         </Nav>
     )
 }
