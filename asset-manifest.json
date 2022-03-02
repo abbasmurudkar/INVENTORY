@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/INVENTORY/static/css/main.e6c13ad2.css",
-    "main.js": "/INVENTORY/static/js/main.736feb9e.js",
+    "main.css": "/INVENTORY/static/css/main.647d1fc5.css",
+    "main.js": "/INVENTORY/static/js/main.7ff75d74.js",
     "static/js/787.7ee10963.chunk.js": "/INVENTORY/static/js/787.7ee10963.chunk.js",
+    "static/media/logo.png": "/INVENTORY/static/media/logo.096968937f6876832669.png",
+    "static/media/bg.jpg": "/INVENTORY/static/media/bg.c9193174b50c1d9904d9.jpg",
+    "static/media/bg6.jpeg": "/INVENTORY/static/media/bg6.476de3546fe78bb649c0.jpeg",
+    "static/media/ipo.png": "/INVENTORY/static/media/ipo.53302aa6dcd82a25f863.png",
+    "static/media/futures.png": "/INVENTORY/static/media/futures.df4c98a099c7d3a86c9a.png",
+    "static/media/mf.png": "/INVENTORY/static/media/mf.d2fbff07c7c1d96ee112.png",
+    "static/media/stocks.png": "/INVENTORY/static/media/stocks.7319b1fbb89e905ddf26.png",
     "index.html": "/INVENTORY/index.html",
-    "main.e6c13ad2.css.map": "/INVENTORY/static/css/main.e6c13ad2.css.map",
-    "main.736feb9e.js.map": "/INVENTORY/static/js/main.736feb9e.js.map",
+    "main.647d1fc5.css.map": "/INVENTORY/static/css/main.647d1fc5.css.map",
+    "main.7ff75d74.js.map": "/INVENTORY/static/js/main.7ff75d74.js.map",
     "787.7ee10963.chunk.js.map": "/INVENTORY/static/js/787.7ee10963.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.736feb9e.js"
+    "static/css/main.647d1fc5.css",
+    "static/js/main.7ff75d74.js"
   ]
 }
