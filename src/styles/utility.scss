@@ -128,7 +128,15 @@ $indent_3: 15px;
 .br-circle {
   border-radius: 50%;
 }
-
+.border_red{
+  border: 2px solid red;
+}
+.border_green{
+  border: 2px solid green;
+}
+.border_grey{
+  border: 2px solid grey;
+}
 .font-bolder {
   font-weight: 500;
 }

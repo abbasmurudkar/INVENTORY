@@ -2,26 +2,26 @@ import React from 'react'
 import styled from 'styled-components';
 
 function Circle(props) {
-  return (
-      <Circlesoption>
+    return (
+        <Circlesoption>
 
-    <div className="wrapper">
-            
-    <svg class="rail" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="80"/>
-    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="50px" font-family="Arial" dy=".3em">{props.text}</text>    
-    </svg>
-    <svg
-    class="bar"
-    viewBox='0 0 200 200'
-    xmlnx="https://www.w3.org/2000/svg"
-    >
-        <circle cx="100" cy="100" r="80">
-            </circle>
-    </svg>
-    </div> 
-      </Circlesoption>
-  )
+            <div className="wrapper">
+
+                <svg className="rail" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" />
+                    <text x="50%" y="50%" textAnchor="middle" fill="black" fontSize="50px" fontFamily="Arial" dy=".3em">{props.text}</text>
+                </svg>
+                <svg
+                    className="bar"
+                    viewBox='0 0 200 200'
+                    xmlnx="https://www.w3.org/2000/svg"
+                >
+                    <circle cx="100" cy="100" r="80">
+                    </circle>
+                </svg>
+            </div>
+        </Circlesoption>
+    )
 }
 
 export default Circle
