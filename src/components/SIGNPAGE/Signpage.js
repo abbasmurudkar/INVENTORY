@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Button, Col, Container, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
+import { Link } from 'react-router-dom'
+import { Button, Col, Container, Grid, Icon, Input, InputGroup, Panel, Placeholder, Row } from 'rsuite'
 import styled from 'styled-components'
 
 function Signpage() {
@@ -58,14 +59,15 @@ function Signpage() {
                                         <Button block type="submit">
                                             <Icon size='lg' icon="github" /> Login with Github
                                         </Button>
+                                        <p className='mt-3 text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
                                     </div>
                                 </div>
                             </Panel>
-                            {/* <Panel>
+                            <Panel>
                                 <div>
                                     <h2>hello</h2>
                                 </div>
-                            </Panel> */}
+                            </Panel>
                         </Col>
                     </Row>
                 </Grid>
@@ -85,7 +87,7 @@ justify-content: space-around;
 }
 .panel{
     box-shadow: 10px 10px 15px grey;
-    width: 460px;
-    height: 460px;
+    width: 400px;
+    /* height: 460px; */
 }
 `;
