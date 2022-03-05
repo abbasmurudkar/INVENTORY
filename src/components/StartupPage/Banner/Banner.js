@@ -18,7 +18,6 @@ function Banner(props) {
                 <BannerText head={"ONE PLATFORM MULTIPLLE "} head1={"INVESTEMENT OPTION."} summary={"Don`t Let The Fear Of Losing Be Greater Then Excitement Of Winning."} />
             </Text>
      
-
         </Background>
     )
 }
