@@ -2,22 +2,23 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-function List({item1,item2,item3,item4,item5,head,item6,item7}) {
-  return (
-<FooterList>
-                        <h3 className='footer-head'>{head}</h3>
-                        <div className='uln'>
-                            <ul type="square">
-                            <li><Link to="/"/>{item1}</li>
-                            <li><Link to="/"/>{item2}</li>
-                            <li><Link to="/"/>{item3}</li>
-                            <li><Link to="/"/>{item4}</li>
-                            <li><Link to="/"/>{item5}</li>
-                            <li><Link to="/"/>{item6}</li>
-                            </ul>
-                        </div>
-</FooterList>
-  )
+function List({ item1, item2, item3, item4, item5, head, item6, item7 }) {
+    return (
+        // LIST OF AVAIBILITY
+        <FooterList>
+            <h3 className='footer-head'>{head}</h3>
+            <div className='uln'>
+                <ul type="square">
+                    <li><Link to="/" />{item1}</li>
+                    <li><Link to="/" />{item2}</li>
+                    <li><Link to="/" />{item3}</li>
+                    <li><Link to="/" />{item4}</li>
+                    <li><Link to="/" />{item5}</li>
+                    <li><Link to="/" />{item6}</li>
+                </ul>
+            </div>
+        </FooterList>
+    )
 }
 export default List
 const FooterList = styled.div`
