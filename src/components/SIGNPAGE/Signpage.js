@@ -25,7 +25,7 @@ function Signpage() {
         <MainContainer>
             <Grid className=' w-100 h-100'>
                 <Row className='h-100' >
-                    <Col xs={24} md={14} className="columns h-100">
+                    <Col  xs={24} md={14} className="columns h-100">
                         <Panel className='panel'>
                             <div className='text-center '>
                                 <h2>Welcome To BROOZ</h2>
@@ -71,7 +71,6 @@ function Signpage() {
                     </Col>
                 </Row>
             </Grid>
-                        
         </MainContainer>
     )
 }
@@ -83,8 +82,9 @@ justify-content: space-evenly;
 user-select:none ;
 .columns{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; //changes would be done and it would be change to space-around for responsive
     align-items: center;
+    /* border: 2px solid red ; */
     width: 100%;
 }
 .rs-panel-body{
@@ -93,7 +93,6 @@ user-select:none ;
 .panel{
     width: 500px;
     position:relative;
-    /* border:2px solid red ; */
     padding:20px;
     left:60px;
     height:600px ;

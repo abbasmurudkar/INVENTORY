@@ -1,5 +1,4 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
 import { Carousel } from 'rsuite';
 import CAROUSEL_ITEM1 from '../../Assets/bg10.png'
@@ -10,7 +9,7 @@ import CAROUSEL_ITEM3 from '../../Assets/bg16.jpeg'
 function CarouselSlider() {
   return (
     <Slider>
-      <Carousel shape='bar' className="custom-slider">
+      <Carousel shape='bar' autoplay autoplayInterval={4000}p className="custom-slider">
         <div className='rs-carousel-slider-item'>
           <img src={CAROUSEL_ITEM1} alt='loading' />
           <div className='content'>
@@ -38,10 +37,6 @@ function CarouselSlider() {
             <p>Wealth Is Not About Having A Lot Of Money<span><br/>It Is About Having A Lot Of Options</span> </p>
           </div>
         </div>
-        {/* <img src={CAROUSEL_ITEM2}  alt= "loading" />
-    <img src={CAROUSEL_ITEM3} alt= "loading"  />
-    <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4"  alt= "loading"  />
-    <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5"  alt= "loading"  /> */}
       </Carousel>
     </Slider>
   )
@@ -76,7 +71,6 @@ height:100vh ;
       padding:20px 20px 0px ;
       font-size:45px ;
       color: #a8fffe;
-
     }
     hr{
       border:2px solid #02def3;
@@ -86,7 +80,6 @@ height:100vh ;
     span{
     font-size:18px ;
     font-weight:bolder ;
-
     }
   }
 }

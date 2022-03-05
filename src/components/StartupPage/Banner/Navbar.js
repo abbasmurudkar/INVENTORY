@@ -53,7 +53,7 @@ function Navbar({title}) {
                 <Link to="/signin">
                     <Button color="orange">SignIn</Button>
                 </Link>
-                <Link to="/signin">
+                <Link to="/Register">
                     <Button color='orange'>Register</Button>
                 </Link>
                 </div>         
