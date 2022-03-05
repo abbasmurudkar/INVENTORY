@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Button, Col, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
 import styled from 'styled-components'
 import CarouselSlider from './Carousel'
-import Carousel from './Carousel'
 
 function Signpage() {
     const [Users, setUsers] = useState("")
@@ -50,22 +49,23 @@ function Signpage() {
                                         </InputGroup.Button>
                                     </InputGroup>
                                     </div>
-                                    <Button type="submit" className='mt-4' size='lg' color="red">Submit</Button>
+                                    <Button style={{background:"transparent",color:"#a8fefe",border:"2px solid #a8fefe", width:"25%"}} type="submit" className='mt-5' size='lg' color="red">Submit</Button>
+                                    <p className='sign-with'>Sign up with</p>
                                 </div>
                                 <div className='mt-3 '>
-                                    <Button block type="submit" size='lg' color='blue'>
+                                    <Button block type="submit" size='lg' color='blue' required>
                                         <Icon size='lg' icon="facebook" /> Login with Facebook
                                     </Button>
-                                    <Button block type="submit" size='lg' color='green'>
+                                    <Button className='google' block type="submit" size='lg'>
                                         <Icon size='lg' icon="google" /> Login with Google
                                     </Button>
-                                    <Button block size='lg' type="submit">
+                                    <Button className='github' block size='lg' type="submit">
                                         <Icon size='lg' icon="github" /> Login with Github
                                     </Button>
-                                    <p className='mt-4 text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
+                                    <p className='mt-5 text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
                                 </div>
                         </Panel>
-                        
+
                         <Panel className='panel2'>
                             <CarouselSlider/>       
                         </Panel>
@@ -81,6 +81,8 @@ export default Signpage
 const MainContainer = styled.div`
 justify-content: space-evenly;
 user-select:none ;
+background-color: #021a27;;
+color:white ;
 .columns{
     display: flex;
     justify-content: space-between; //changes would be done and it would be change to space-around for responsive
@@ -91,11 +93,52 @@ user-select:none ;
 .rs-panel-body{
     padding:0 ;
 }
+
 .panel{
     width: 500px;
     position:relative;
     padding:20px;
     left:60px;
     height:600px ;
+    box-shadow:5px 5px 15px #5fb9ba ;
+}
+.github{
+    background-color:#00d09c ;
+    color:white ;
+}
+.google{
+    background-color:white;
+}
+.sign-with{
+  margin-top: 20px; 
+  margin-left: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #a8fffe;
+  font-weight: 540;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+
+.sign-with::before{
+    content: "";
+    display: inline-block;
+    height: 3px;
+    width: 27%;
+    background-color: #2a405b;
+    position: relative;
+    vertical-align: middle;
+    left: -20px;
+}
+
+
+.sign-with::after{
+    content: "";
+    display: inline-block; 
+    height: 3px;
+    width: 27%;
+    background-color: #2a405b;
+    vertical-align: middle;
+    position: relative;
+    left: 30px;
 }
 `;

@@ -1,9 +1,10 @@
 import React from 'react'
+import CarouselSlider from './Carousel'
 
 function Register() {
   return (
-    <div>Register</div>
+    <div><CarouselSlider/></div>
   )
 }
 
-export default Register
+export default Register 

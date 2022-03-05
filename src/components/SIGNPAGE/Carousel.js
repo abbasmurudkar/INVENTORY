@@ -9,7 +9,7 @@ import CAROUSEL_ITEM3 from '../../Assets/bg16.jpeg'
 function CarouselSlider() {
   return (
     <Slider>
-      <Carousel shape='bar' autoplay autoplayInterval={4000}p className="custom-slider">
+      <Carousel shape='bar'  className="custom-slider">
         <div className='rs-carousel-slider-item'>
           <img src={CAROUSEL_ITEM1} alt='loading' />
           <div className='content'>
