@@ -4,8 +4,8 @@ import Abouttabs from './Abouttabs';
 function About(props) {
 
   return (
+    // WEBSITE ABOUT FEATURES
     <Abouts id="About">
-
       <div className='headm'>
         <h2>Why invest with Brooz?</h2>
         <div className='herd'>

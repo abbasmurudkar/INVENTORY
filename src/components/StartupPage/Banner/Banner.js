@@ -8,7 +8,7 @@ function Banner(props) {
     const title = "ROOZ"
     return (
         <Background id="home">
-
+            
             {/* ------ NAVBAR------ */}
             <Navbar title={title}/>
 

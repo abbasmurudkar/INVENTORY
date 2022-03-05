@@ -11,6 +11,7 @@ import BACKGROUND_VIDEO from "../../../Assets/bg6.jpeg"
 
 
 function Abouttabs() {
+    // TABS DATA
     const tabs = [
         {
             Head: "STOCKS",
@@ -47,11 +48,13 @@ function Abouttabs() {
 
     ]
     return (
+        // TABS FOR ABOUT PAGE
         <TabsComponent>
             <div className="Head">
             <h2>Multiple Investment Opportunities</h2>
             <p>Long term investors, pro traders or part-time traders can <br/>choose across various asset classes and create your<br/> customised portfolio. All from one platform</p>
             </div>
+            {/* TABS HEADING */}
             <Tabs className="M-tabs">
                 <TabList className="tabs-list" style={{ fontSize: "22px" }}>
                     <Tab>Stocks</Tab>
@@ -60,10 +63,10 @@ function Abouttabs() {
                     <Tab>Future & Options</Tab>
                 </TabList>
                 <hr className='line' />
+                {/* TABS LISTS AND ITS DATA */}
                 {tabs.map((t, index) => (
                     <div key={index}>
                         <TabPanel className="Panel">
-
                             <h2 style={{ position: "relative", display: "block", padding: "20px", fontWeight: "900", color:"#cfe6f9" }}>{t.Head}</h2>
                             <img style={{ position: "relative", left: "550px", display: "inline-block", width: "300px", top: "-45px" }} src={t.background} alt="Loading" />
                             <div className="tabs-text">
