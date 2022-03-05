@@ -28,7 +28,7 @@ function App() {
       <Route path="/Register">
         <Register/>
       </Route>
-
+      
     </Switch>
   )
 }

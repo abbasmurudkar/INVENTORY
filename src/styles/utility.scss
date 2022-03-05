@@ -1,7 +1,7 @@
 $indent_1: 5px;
 $indent_2: 10px;
 $indent_3: 15px;
-
+$indent_4: 35px;
 .link-unstyled {
   &,
   &:visited,
@@ -38,6 +38,9 @@ $indent_3: 15px;
 .width-200 {
   width: 200px;
 }
+.width-900 {
+  width: 900px;
+}
 
 .height-200 {
   height: 200px;
@@ -50,7 +53,9 @@ $indent_3: 15px;
 .h-100 {
   height: 100%;
 }
-
+.h-100vh{
+  height: 100vh;
+}
 .w-100 {
   width: 100%;
 }
@@ -194,7 +199,9 @@ $indent_3: 15px;
 .mt-3 {
   margin-top: $indent_3;
 }
-
+.mt-5{
+  margin-top: $indent_4 !important;
+}
 .mb-1 {
   margin-bottom: $indent_1;
 }
