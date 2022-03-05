@@ -40,5 +40,4 @@ width: 100%;
 height: 750px;
 position: relative;
 color: white;
-/* border: 2px solid green; */
 `;
