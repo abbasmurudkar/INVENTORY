@@ -4,60 +4,63 @@ import { Button, Icon } from 'rsuite';
 import styled from 'styled-components';
 import WEBSITE_LOGO from '../../../Assets/logo.png'
 
-function Navbar({title}) {
-     const NavMenu = [
+function Navbar({ title }) {
+    const NavMenu = [
         {
-            id:"1",
+            id: "1",
             text: "Home",
             icon: "home",
-            url:"#home"
+            url: "#home"
         },
         {
-            id:"2",
+            id: "2",
             text: "About",
             icon: "adjust",
-            url:"#About"
+            url: "#About"
         },
         {
-            id:"3",
+            id: "3",
             text: "Contact",
             icon: "address-book",
-            url:"#Contact"
+            url: "#Contact"
         },
         {
-            id:"4",
+            id: "4",
             text: "Support",
             icon: "user",
-            url:"#Support"
+            url: "#Support"
         }
 
     ]
     return (
         <Nav>
+            {/* LOGO */}
             <div className='Nav_Logo'>
                 <Link to="/">
                     <img src={WEBSITE_LOGO} alt="Loading" /><span>{title}</span>
                 </Link>
             </div>
-             <div className='Nav_Navigation'>
+
+            {/* NAVIGATION MENU */}
+            <div className='Nav_Navigation'>
                 {NavMenu.map((Nav, Key) => {
                     return (
                         <div className='Nav_Menu' key={Key}>
-                           <Icon id="icon" icon={Nav ? Nav.icon : "logo"}/> 
-                           <span>{Nav.text}</span> 
+                            <Icon id="icon" icon={Nav ? Nav.icon : "logo"} />
+                            <span>{Nav.text}</span>
                         </div>
                     )
                 })}
-              
-            <div className='Nav_btn'>
-                <Link to="/signin">
-                    <Button color="orange">SignIn</Button>
-                </Link>
-                <Link to="/Register">
-                    <Button color='orange'>Register</Button>
-                </Link>
-                </div>         
-            </div>   
+
+                <div className='Nav_btn'>
+                    <Link to="/signin">
+                        <Button color="orange">SignIn</Button>
+                    </Link>
+                    <Link to="/Register">
+                        <Button color='orange'>Register</Button>
+                    </Link>
+                </div>
+            </div>
         </Nav>
     )
 }

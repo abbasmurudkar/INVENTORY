@@ -65,6 +65,7 @@ function Signpage() {
                                     <p className='mt-4 text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
                                 </div>
                         </Panel>
+                        
                         <Panel className='panel2'>
                             <CarouselSlider/>       
                         </Panel>

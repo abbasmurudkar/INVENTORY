@@ -8,16 +8,18 @@ function Banner(props) {
     const title = "ROOZ"
     return (
         <Background id="home">
-           
+
             {/* ------ NAVBAR------ */}
             <Navbar title={title}/>
             {/* --- NAVBAR ENDS ----*/}
+
 
             {/* --- TEXT-SECTION--- */}
             <Text>
                 <BannerText head={"ONE PLATFORM MULTIPLLE "} head1={"INVESTEMENT OPTION."} summary={"Don`t Let The Fear Of Losing Be Greater Then Excitement Of Winning."} />
             </Text>
             {/*--TEXT-SECTION-ENDS--*/}    
+            
         </Background>
     )
 }
