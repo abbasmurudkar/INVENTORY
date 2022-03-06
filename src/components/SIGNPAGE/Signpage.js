@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button, Col, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
 import styled from 'styled-components'
 import CarouselSlider from './Carousel'
+import Example from './Example'
 
 function Signpage() {
     const [Users, setUsers] = useState("")
@@ -67,7 +68,7 @@ function Signpage() {
                         </Panel>
 
                         <Panel className='panel2'>
-                            <CarouselSlider/>       
+                            <CarouselSlider/>
                         </Panel>
                     </Col>
                 </Row>
@@ -78,8 +79,7 @@ function Signpage() {
 
 export default Signpage
 
-const MainContainer = styled.div`
-justify-content: space-evenly;
+export const MainContainer = styled.div`
 user-select:none ;
 background-color: #021a27;;
 color:white ;
@@ -99,6 +99,7 @@ color:white ;
     position:relative;
     padding:20px;
     left:60px;
+    right:0 ;
     height:600px ;
     box-shadow:5px 5px 15px #5fb9ba ;
 }
@@ -129,8 +130,6 @@ color:white ;
     vertical-align: middle;
     left: -20px;
 }
-
-
 .sign-with::after{
     content: "";
     display: inline-block; 
