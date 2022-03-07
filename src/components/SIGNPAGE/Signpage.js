@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Button, Col, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
 import styled from 'styled-components'
 import CarouselSlider from './Carousel'
-import Example from './Example'
 
 function Signpage() {
     const [Users, setUsers] = useState("")

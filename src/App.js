@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import PrivateRouter from "./components/PrivateRouter";
 import PublicRouter from "./components/PublicRouter";
 import Register from "./components/SIGNPAGE/Register";
-import Example from "./components/SIGNPAGE/Example";
 function App() {
   return (
     <Switch>
