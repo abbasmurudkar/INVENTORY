@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Alert, Button, Col, Grid, Icon, Input, InputGroup, Panel, Row, Tooltip, Whisper } from 'rsuite'
+import { Alert, Button, Col, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
 import styled from 'styled-components'
 import CarouselSlider from './Carousel'
 import { MainContainer } from './Signpage'
