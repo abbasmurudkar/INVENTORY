@@ -21,11 +21,14 @@ function Signpage() {
         console.log(show_hide)
     }
     return (
-        <MainContainer>
-            <Grid className=' w-100 h-100'>
-                <Row className='h-100' >
+        <MainContainer className='h-100 w-100'>
+            <Grid className='w-100 h-100'>
+                <Row className='w-100 h-100' >
                     <Col  xs={24} md={14} className="columns h-100">
+                    <div className='main-div'>
                         <Panel className='panel'>
+                           
+
                             <div className='text-center '>
                                 <h2>Welcome To BROOZ</h2>
                                 <p>Progressive Platform For Investment</p>
@@ -65,8 +68,9 @@ function Signpage() {
                                     <p className='mt-5 text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
                                 </div>
                         </Panel>
+                        </div>
 
-                        <Panel className='panel2'>
+                        <Panel className='panel2 '>
                             <CarouselSlider/>
                         </Panel>
                     </Col>
@@ -92,19 +96,24 @@ color:white ;
 .rs-panel-body{
     padding:0 ;
 }
-
 .panel{
     width: 500px;
     position:relative;
-    padding:20px;
-    left:60px;
+    padding:40px;
+    /* left:60px; */
     right:0 ;
-    height:600px ;
-    box-shadow:5px 5px 15px #5fb9ba ;
+    height:650px ;
+    /* box-shadow:5px 5px 15px #5fb9ba ; */
 }
 .github{
     background-color:#00d09c ;
     color:white ;
+}
+.main-div{
+    display:flex ;
+    justify-content:center ;
+    align-items:center ;
+    width:50% ;
 }
 .google{
     background-color:white;
@@ -118,7 +127,6 @@ color:white ;
   font-weight: 540;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 } 
-
 .sign-with::before{
     content: "";
     display: inline-block;

@@ -21,7 +21,6 @@ function Banner(props) {
         </Background>
     )
 }
-
 export default Banner
 
 const Background = styled.div`
