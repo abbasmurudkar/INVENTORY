@@ -26,7 +26,6 @@ function Signpage() {
     }
 
 
-
     const OnuserChange = (value) => {
         setUsers(value)
         console.log(value)
@@ -78,10 +77,10 @@ function Signpage() {
                                     <Button onClick={onFacebookLogin}  block type="submit" size='lg' color='blue' required>
                                         <Icon size='lg' icon="facebook" /> Login with Facebook
                                     </Button>
-                                    <Button className='google' block type="submit" size='lg'>
+                                    <Button onClick={onGoogleLogin} className='google' block type="submit" size='lg'>
                                         <Icon size='lg' icon="google" /> Login with Google
                                     </Button>
-                                    <Button className='github' block size='lg' type="submit">
+                                    <Button onClick={onGithubLogin} className='github' block size='lg' type="submit">
                                         <Icon size='lg' icon="github" /> Login with Github
                                     </Button>
                                     <p className='mt-5 text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
