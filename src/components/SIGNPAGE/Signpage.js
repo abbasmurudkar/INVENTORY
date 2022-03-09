@@ -2,12 +2,31 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Col, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
 import styled from 'styled-components'
+import { auth } from '../../misc/Firebase'
 import CarouselSlider from './Carousel'
-
+import firebase from 'firebase/app'
 function Signpage() {
     const [Users, setUsers] = useState("")
     const [Password, setPassword] = useState("")
     const [show_hide, setshow_hide] = useState(false)
+
+
+
+    const SigInWithProvider = (provider)=>{
+        auth.signInWithPopup(provider)
+    }
+    const onFacebookLogin = ()=>{
+        SigInWithProvider(new firebase.auth.FacebookAuthProvider())
+    }
+    const onGoogleLogin = () =>{
+        SigInWithProvider(new firebase.auth.GoogleAuthProvider())
+    }
+    const onGithubLogin = () =>{
+        SigInWithProvider(new firebase.auth.GithubAuthProvider())
+    }
+
+
+
     const OnuserChange = (value) => {
         setUsers(value)
         console.log(value)
@@ -56,7 +75,7 @@ function Signpage() {
                                     <p className='sign-with'>Sign up with</p>
                                 </div>
                                 <div className='mt-3 '>
-                                    <Button block type="submit" size='lg' color='blue' required>
+                                    <Button onClick={onFacebookLogin}  block type="submit" size='lg' color='blue' required>
                                         <Icon size='lg' icon="facebook" /> Login with Facebook
                                     </Button>
                                     <Button className='google' block type="submit" size='lg'>

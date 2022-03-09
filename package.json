@@ -9,7 +9,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.0",
-    "firebase": "^9.6.8",
+    "firebase": "^8.10.0",
     "gh-pages": "^3.2.3",
     "install": "^0.13.0",
     "jquery": "^3.6.0",
