@@ -71,7 +71,8 @@ color: white;
 justify-content: space-between; 
 padding: 15px 29px; 
 align-items: center;
-background: #182552;
+/* background: #182552; */
+background:#091135 ;
     position: fixed;
     z-index: 5;
     width: 100%;

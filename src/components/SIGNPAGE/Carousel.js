@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Carousel } from 'rsuite';
-import CAROUSEL_ITEM1 from '../../Assets/bg10.png'
-import CAROUSEL_ITEM2 from '../../Assets/bg11.jpeg'
+import CAROUSEL_ITEM1 from '../../Assets/bg20.jpeg'
+import CAROUSEL_ITEM2 from '../../Assets/bg21.jpeg'
 import CAROUSEL_ITEM3 from '../../Assets/bg16.jpeg'
 
 
 function CarouselSlider() {
   return (
     <Slider>
-      <Carousel shape='bar' autoplay  className="custom-slider">
+      <Carousel shape='bar'   className="custom-slider">
         <div className='rs-carousel-slider-item'>
           <img src={CAROUSEL_ITEM1} alt='loading' />
           <div className='content'>
@@ -65,17 +65,20 @@ height:100vh ;
       padding:0px 20px 0px 20px ; //top right bottom left
       font-size:22px ;
       font-weight:bolder ;
-      color: #6bcbca    
+      /* color: #6bcbca     */
+      color:#aab85e ;
     }
     h1{
       padding:20px 20px 0px ;
       font-size:45px ;
-      color: #a8fffe;
+      /* color: #a8fffe; */
+      color:#e9d62f ;
     }
     hr{
-      border:2px solid #02def3;
+      /* border:2px solid #02def3; */
+      /* border:2px solid #e9d62f ; */
+
       width:70% ;
-      color: white;
     }
     span{
     font-size:18px ;

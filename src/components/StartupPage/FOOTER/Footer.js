@@ -37,7 +37,8 @@ function Footer() {
 export default Footer
 
 const FooterLayout = styled.div`
-background-color: #1e2232;
+/* background-color: #1e2232; */
+background:#091135 ;
 color: white;
 width: 100%;
 height: 420px;

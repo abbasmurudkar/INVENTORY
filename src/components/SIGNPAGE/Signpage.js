@@ -1,30 +1,43 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Col, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
+import { Alert, Button, Col, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
 import styled from 'styled-components'
-import { auth } from '../../misc/Firebase'
+import { auth, db } from '../../misc/Firebase'
 import CarouselSlider from './Carousel'
 import firebase from 'firebase/app'
+
 function Signpage() {
     const [Users, setUsers] = useState("")
     const [Password, setPassword] = useState("")
     const [show_hide, setshow_hide] = useState(false)
 
-
-
-    const SigInWithProvider = (provider)=>{
-        auth.signInWithPopup(provider)
+    const SigInWithProvider = async (provider) => {
+        try {
+            const { additionalUserInfo, user } = await auth.signInWithPopup(provider);
+            console.log(additionalUserInfo)
+            if (additionalUserInfo.isNewUser) {
+                await db.ref(`/profiles/${user.uid}`).set({
+                    Name: user.displayName,
+                    CreatedAt: firebase.database.ServerValue.TIMESTAMP,
+                    Provider: additionalUserInfo.providerId,
+                    Avatar : user.photoURL
+                })
+            }
+            Alert.success("LOGIN SUCCESSFULL WELCOME TO BROOZ", 4000)
+        }
+        catch (err) {
+            Alert.info(err.message, 4000)
+        }
     }
-    const onFacebookLogin = ()=>{
+    const onFacebookLogin = () => {
         SigInWithProvider(new firebase.auth.FacebookAuthProvider())
     }
-    const onGoogleLogin = () =>{
+    const onGoogleLogin = () => {
         SigInWithProvider(new firebase.auth.GoogleAuthProvider())
     }
-    const onGithubLogin = () =>{
+    const onGithubLogin = () => {
         SigInWithProvider(new firebase.auth.GithubAuthProvider())
     }
-
 
     const OnuserChange = (value) => {
         setUsers(value)
@@ -42,18 +55,16 @@ function Signpage() {
         <MainContainer className='h-100 w-100'>
             <Grid className='w-100 h-100'>
                 <Row className='w-100 h-100' >
-                    <Col  xs={24} md={14} className="columns h-100">
-                    <div className='main-div'>
-                        <Panel className='panel'>
-                           
-
-                            <div className='text-center '>
-                                <h2>Welcome To BROOZ</h2>
-                                <p>Progressive Platform For Investment</p>
-                            </div>
-                            <div className='mt-5 '>
+                    <Col xs={24} md={14} className="columns h-100">
+                        {/* <div className='main-div'> */}
+                            <Panel className='panel'>
+                                <div className='text-center '>
+                                    <h2>Welcome To BROOZ</h2>
+                                    <p>Progressive Platform For Investment</p>
+                                </div>
+                                <div className='mt-5 '>
                                     <div className='Input-Group mt-3'>
-                                    <label htmlFor='user'>USERNAME:</label>
+                                        <label htmlFor='user'>USERNAME:</label>
                                         <InputGroup>
                                             <Input type='text' value={Users} onChange={OnuserChange} id="user" />
                                             <InputGroup.Button>
@@ -62,19 +73,19 @@ function Signpage() {
                                         </InputGroup>
                                     </div>
                                     <div className='Input-Group mt-3'>
-                                    <label htmlFor='password'>PASSWORD:</label>
-                                    <InputGroup>
-                                        <Input type={show_hide ? "text" : "password"} value={Password} onChange={OnpasswordChange} id="password" />
-                                        <InputGroup.Button onClick={Show_Hide}>
-                                            <Icon icon={show_hide ? "eye" : "eye-slash"}></Icon>
-                                        </InputGroup.Button>
-                                    </InputGroup>
+                                        <label htmlFor='password'>PASSWORD:</label>
+                                        <InputGroup>
+                                            <Input type={show_hide ? "text" : "password"} value={Password} onChange={OnpasswordChange} id="password" />
+                                            <InputGroup.Button onClick={Show_Hide}>
+                                                <Icon icon={show_hide ? "eye" : "eye-slash"}></Icon>
+                                            </InputGroup.Button>
+                                        </InputGroup>
                                     </div>
-                                    <Button style={{background:"transparent",color:"#a8fefe",border:"2px solid #a8fefe", width:"25%"}} type="submit" className='mt-5' size='lg' color="red">Submit</Button>
+                                    <Button style={{ background: "transparent", color: "#a8fefe", border: "2px solid #a8fefe", width: "25%" }} type="submit" className='mt-5' size='lg' color="red">Submit</Button>
                                     <p className='sign-with'>Sign up with</p>
                                 </div>
                                 <div className='mt-3 '>
-                                    <Button onClick={onFacebookLogin}  block type="submit" size='lg' color='blue' required>
+                                    <Button onClick={onFacebookLogin} block type="submit" size='lg' color='blue' required>
                                         <Icon size='lg' icon="facebook" /> Login with Facebook
                                     </Button>
                                     <Button onClick={onGoogleLogin} className='google' block type="submit" size='lg'>
@@ -85,8 +96,8 @@ function Signpage() {
                                     </Button>
                                     <p className='mt-5 text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
                                 </div>
-                        </Panel>
-                        </div>
+                            </Panel>
+                        {/* </div> */}
 
                         <Panel className='panel2 '>
                             <CarouselSlider/>
@@ -102,11 +113,11 @@ export default Signpage
 
 export const MainContainer = styled.div`
 user-select:none ;
-background-color: #021a27;;
+background-color: #070a2a;
 color:white ;
 .columns{
     display: flex;
-    justify-content: space-between; //changes would be done and it would be change to space-around for responsive
+    justify-content: space-around; //changes would be done and it would be change to space-around for responsive
     align-items: center;
     /* border: 2px solid red ; */
     width: 100%;
@@ -122,16 +133,17 @@ color:white ;
     right:0 ;
     height:650px ;
     /* box-shadow:5px 5px 15px #5fb9ba ; */
+    /* border:2px solid green ; */
 }
 .github{
     background-color:#00d09c ;
     color:white ;
 }
 .main-div{
+    border:2px solid red ;
     display:flex ;
     justify-content:center ;
     align-items:center ;
-    width:50% ;
 }
 .google{
     background-color:white;
