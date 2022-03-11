@@ -52,7 +52,6 @@ function Signpage() {
     const Show_Hide = () => {
         setshow_hide(!show_hide)
     }
-  
     // ///////////////////////////////////////////////////////////
 
     ////--------- SIGIN METHOD WITH SUBMIT BUTTON ------------///
