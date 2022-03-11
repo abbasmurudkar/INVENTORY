@@ -14,7 +14,7 @@ function Register() {
   const [show_hide, setshow_hide] = useState(false)
   const history = useHistory();
 
-  const OnuserChange = (value) => {
+  const OnusernameChange = (value) => {
     setUsers(value)
   }
   const OnpasswordChange = (value) => {
@@ -58,7 +58,7 @@ function Register() {
                     <label htmlFor='User-Name'>NAME:</label>
 
                     <InputGroup inside>
-                      <Input type='text' value={Users} onChange={OnuserChange} id="User-Name" />
+                      <Input type='text' value={Users} onChange={OnusernameChange} id="User-Name" />
                       <InputGroup.Button>
                         <Icon icon="user" />
                       </InputGroup.Button>

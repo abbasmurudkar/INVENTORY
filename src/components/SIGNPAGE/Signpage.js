@@ -7,7 +7,7 @@ import CarouselSlider from './Carousel'
 import firebase from 'firebase/app'
 
 function Signpage() {
-    const [Email, setUsers] = useState("")
+    const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
     const [show_hide, setshow_hide] = useState(false)
     ////-------------SIGINWITH PROVIDER--------------------////
@@ -44,15 +44,15 @@ function Signpage() {
 
     ////---------------- STATE VALUE ------------------------////
     const OnuserChange = (value) => {
-        setUsers(value)
+        setEmail(value)
     }
     const OnpasswordChange = (value) => {
         setPassword(value)
     }
     const Show_Hide = () => {
         setshow_hide(!show_hide)
-        console.log(show_hide)
     }
+  
     // ///////////////////////////////////////////////////////////
 
     ////--------- SIGIN METHOD WITH SUBMIT BUTTON ------------///
@@ -63,10 +63,9 @@ function Signpage() {
             console.log(additionalUserInfo)
             if (additionalUserInfo.isNewUser===false) {
                 await db.ref(`/profiles/${user.uid}`).set({
-                    Name: user.email,
+                    Email: user.email,
                     CreatedAt: firebase.database.ServerValue.TIMESTAMP,
                     Provider: additionalUserInfo.providerId,
-                    Avatar: user.photoURL
                 })
             }
             Alert.success("LOGIN SUCCESSFULL WELCOME TO BROOZ", 4000)
