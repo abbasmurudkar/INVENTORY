@@ -1,0 +1,15 @@
+.inactive{
+    width: 80px !important;
+}
+.side-menu.inactive .top-section .toogle-menu .btn{
+    right: -70px !important;
+}    
+.side-menu.inactive .main-menu .list span{
+    opacity: 0;
+}
+.side-menu.inactive .side-menu-footer .user-info{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

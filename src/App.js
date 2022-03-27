@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import StartupPage from "./pages/StartupPage";
 import 'rsuite/dist/styles/rsuite-default.css';
@@ -9,8 +9,16 @@ import Home from "./pages/Home";
 import PrivateRouter from "./components/PrivateRouter";
 import PublicRouter from "./components/PublicRouter";
 import Register from "./components/SIGNPAGE/Register";
+import { ProfileProvider } from "./context/Profile.context";
 function App() {
+  const [Users, setUsers] = useState("")
+
+  const OnusernameChange = (value) => {
+    setUsers(value)
+    console.log(value)
+  }
   return (
+    <ProfileProvider>
     <Switch>
 
        <Route exact path="/">
@@ -18,7 +26,7 @@ function App() {
       </Route>
 
       <PublicRouter exact path="/signin">
-      <Signpage/>
+      <Signpage Users={Users}/>
       </PublicRouter>
 
       <PrivateRouter path="/home">
@@ -26,9 +34,12 @@ function App() {
       </PrivateRouter>
 
       <Route path="/Register">
-        <Register/>
+        <Register Users={Users} OnusernameChange={OnusernameChange}/>
       </Route> 
+      
     </Switch>
+    </ProfileProvider>
+
   )
 }
 

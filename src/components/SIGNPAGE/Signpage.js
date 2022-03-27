@@ -6,7 +6,7 @@ import { auth, db } from '../../misc/Firebase'
 import CarouselSlider from './Carousel'
 import firebase from 'firebase/app'
 
-function Signpage() {
+function Signpage({Users}) {
     const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
     const [show_hide, setshow_hide] = useState(false)
@@ -59,9 +59,9 @@ function Signpage() {
         e.preventDefault()
         try {
             const { additionalUserInfo, user } = await auth.signInWithEmailAndPassword(Email,Password);
-            console.log(additionalUserInfo)
             if (additionalUserInfo.isNewUser===false) {
                 await db.ref(`/profiles/${user.uid}`).set({
+                    Name: Users,
                     Email: user.email,
                     CreatedAt: firebase.database.ServerValue.TIMESTAMP,
                     Provider: additionalUserInfo.providerId,

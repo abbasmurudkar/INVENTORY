@@ -7,16 +7,12 @@ import { MainContainer } from './Signpage'
 import EmailFill from '@rsuite/icons/EmailFill'
 import { auth } from '../../misc/Firebase'
 import { useHistory } from 'react-router-dom';
-function Register() {
-  const [Users, setUsers] = useState("")
+function Register({Users, OnusernameChange}) {
   const [Password, setPassword] = useState("")
   const [Email, setEmail] = useState(" ")
   const [show_hide, setshow_hide] = useState(false)
   const history = useHistory();
 
-  const OnusernameChange = (value) => {
-    setUsers(value)
-  }
   const OnpasswordChange = (value) => {
     setPassword(value)
   }
@@ -29,12 +25,11 @@ function Register() {
   const OnRegister = async (e) => {
     e.preventDefault()
     try {
-      const result = await auth.createUserWithEmailAndPassword(Email, Password).then((auth) => {
+       await auth.createUserWithEmailAndPassword(Email, Password).then((auth) => {
         if (auth) {
           history.push("/signin")
         }})
       Alert.success("REGISTER SUCCESSFULL PROCEED TO LOGIN", 4000)
-      console.log(result)
     }
     catch (err) {
       Alert.info(err.message, 4000)
