@@ -45,7 +45,7 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className='side-menu-footer'>
-                    <div className='avatar'>
+                    <div className='Logout_btn'>
                         <Button id="btn" block color='red' ><Icon size='md' icon="long-arrow-right"/></Button>
                     </div>
                     <div className='user-info'>
@@ -69,38 +69,6 @@ const SideNav = styled.div`
         box-sizing:border-box ;
         padding: 30px 20px ;
         transition: width 0.3s ease-in ;
-        .side-menu-footer{
-            width:100% ;
-            height:100px ;
-            background:#333 ;
-            position:absolute ;
-            bottom:0 ;
-            padding:  20px;
-            left:0 ;
-                .avatar{
-                    width:40px ;
-                    height:50px ;
-                    overflow:hidden ;
-                    display: inline-block ;
-                    #btn{
-                        height:50px ;
-                    }
-                img{
-                     max-width:100% ;
-                }
-            }
-                .user-info{
-                    display:inline-block ;
-                    margin: 0 10px ;
-                    color: white ;
-                    position:absolute ;
-                    opacity:1 ;
-                    transition: opacity 0.3s ease-in ;
-                h4{
-                    padding:8px ;
-                }
-            }
-        }
         .top-section{
             position:relative ;
             .logo{
@@ -129,19 +97,15 @@ const SideNav = styled.div`
                     }
                 }
             }
+            .Profile-Name{
+                width:100% ;
+                color: white ;
+                padding-top:10px ;
+                img{
+                    max-width:100% ;
+                }
+            }
         }
-        .main-menu{
-            margin: 5px 0;
-        }
-        .Profile-Name{
-        width:100% ;
-        color: white ;
-        padding-top:10px ;
-        img{
-            max-width:100% ;
-        }
-        }
-    }
     .divider{
         width: 100%;
         height : 1px;
@@ -149,5 +113,37 @@ const SideNav = styled.div`
         background: #333 ;
         margin-top:10px ;
     }
+    .main-menu{margin: 5px 0;}
 
+        .side-menu-footer{
+            width:100% ;
+            height:100px ;
+            background:#333 ;
+            position:absolute ;
+            bottom:0 ;
+            padding:  20px;
+            left:0 ;
+                .Logout_btn{
+                    width:40px ;
+                    height:50px ;
+                    overflow:hidden ;
+                    display: inline-block ;
+                    #btn{
+                        height:50px ;
+                    }
+            }
+                .user-info{
+                    display:inline-block ;
+                    margin: 0 10px ;
+                    color: white ;
+                    position:absolute ;
+                    opacity:1 ;
+                    transition: opacity 0.3s ease-in ;
+                h4{
+                    padding:8px ;
+                    font-weight:bolder ;
+                }
+            }
+        } 
+    }
 `;

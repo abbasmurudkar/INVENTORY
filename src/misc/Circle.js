@@ -4,9 +4,7 @@ import styled from 'styled-components';
 function Circle(props) {
     return (
         <Circlesoption>
-
             <div className="wrapper">
-
                 <svg className="rail" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="100" cy="100" r="80" />
                     <text x="50%" y="50%" textAnchor="middle" fill="black" fontSize="50px" fontFamily="Arial" dy=".3em">{props.text}</text>
