@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Icon} from 'rsuite'
 import styled from 'styled-components'
 import WEBSITE_LOGO from '../../Assets/logo.png'
@@ -9,10 +9,11 @@ import MenuIcon from '@rsuite/icons/Menu';
 import "../../CSS/Sidebar.css"
 import SideList from './SideList'
 import ProfileAvatar from './ProfileAvatar'
-const Sidebar = () => {
+const Sidebar = (props) => {
     const { profile } = useProfile()
     //     const {profile} = useProfile()
     const [inactive, setinactive] = useState(false)
+        props.sideContent(inactive)
     return (
         <SideNav>
             <div className={`side-menu ${inactive ? "inactive" : " "}`}>
