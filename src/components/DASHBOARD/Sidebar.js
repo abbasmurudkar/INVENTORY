@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react'
-import { Avatar, Button, Icon, List } from 'rsuite'
+import { Button, Icon} from 'rsuite'
 import styled from 'styled-components'
 import WEBSITE_LOGO from '../../Assets/logo.png'
 import { useProfile } from '../../context/Profile.context'
 import CloseIcon from '@rsuite/icons/Close';
 import MenuIcon from '@rsuite/icons/Menu';
-import "./Sidebar.css"
+import "../../CSS/Sidebar.css"
 import SideList from './SideList'
 import ProfileAvatar from './ProfileAvatar'
 const Sidebar = () => {
@@ -27,7 +27,7 @@ const Sidebar = () => {
                     </div>
                     <div className='Profile-Name'>
                         {inactive ?
-                                <ProfileAvatar src={profile.Avatar} name={profile.Name}/>
+                                <ProfileAvatar src={profile.Avatar} name={profile.Name} className="font-bolder"/>
                             :
                             <h4>Hi, {profile.Name}</h4>
                         }
@@ -46,15 +46,10 @@ const Sidebar = () => {
                 </div>
                 <div className='side-menu-footer'>
                     <div className='avatar'>
-                        <Avatar circle>
-                        <img src={profile.Avatar} alt="loading" />
-                        </Avatar>
-                        {/* <Button ><Icon icon="long-arrow-right"/></Button> */}
+                        <Button id="btn" block color='red' ><Icon size='md' icon="long-arrow-right"/></Button>
                     </div>
                     <div className='user-info'>
-                        <h5>{profile.Name}</h5>
-                        <Button id="btn" color='red'><Icon icon="long-arrow-right"/></Button>
-                        <p>{profile.email}</p>
+                       <h4>Logout</h4>
                     </div>
                 </div>
             </div>
@@ -84,9 +79,12 @@ const SideNav = styled.div`
             left:0 ;
                 .avatar{
                     width:40px ;
-                    height:40px ;
+                    height:50px ;
                     overflow:hidden ;
                     display: inline-block ;
+                    #btn{
+                        height:50px ;
+                    }
                 img{
                      max-width:100% ;
                 }
@@ -98,18 +96,8 @@ const SideNav = styled.div`
                     position:absolute ;
                     opacity:1 ;
                     transition: opacity 0.3s ease-in ;
-                h5{
-                    font-size:15px ;
-
-                }
-                p{
-                    font-size:14px ;
-                }
-                #btn{
-                    padding:5px 8px ;
-                    position:absolute ;
-                    right:0 ;
-                    top:-7px ;
+                h4{
+                    padding:8px ;
                 }
             }
         }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Circle from '../../../styles/Circle';
+import Circle from '../../../misc/Circle';
 
 function Features() {
     return (
