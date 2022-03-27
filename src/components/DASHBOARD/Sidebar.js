@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button, Icon} from 'rsuite'
 import styled from 'styled-components'
 import WEBSITE_LOGO from '../../Assets/logo.png'

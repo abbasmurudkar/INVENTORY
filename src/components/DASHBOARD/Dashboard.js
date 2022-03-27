@@ -3,11 +3,10 @@ import styled from 'styled-components'
 import Sidebar from './Sidebar'
 import "../../CSS/Sidebar.css"
 const Dashboard = () => {
-  const [inactive,setinactive] = useState("false")
+  const [inactive,setinactive] = useState(false)
     return (
         <MainBoard>
          <Sidebar sideContent={(inactive)=>{
-           console.log(inactive)
            setinactive(inactive)
          }} />
          <div className={`main ${inactive? "inactive":" "}`}>
