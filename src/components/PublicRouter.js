@@ -14,7 +14,7 @@ function PublicRouter({children, ...routeProps}) {
     }
     if (profile && !isLoading)
     {
-        return <Redirect to="/home"/>
+        return <Redirect to="/Dashboard"/>
     }
     return (
         <Route {...routeProps}>

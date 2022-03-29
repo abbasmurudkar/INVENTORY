@@ -10,6 +10,8 @@ import PrivateRouter from "./components/PrivateRouter";
 import PublicRouter from "./components/PublicRouter";
 import Register from "./components/SIGNPAGE/Register";
 import { ProfileProvider } from "./context/Profile.context";
+import Dashboard from "./components/DASHBOARD/Dashboard";
+import Error from "./components/ERROR/Error";
 function App() {
   const [Users, setUsers] = useState("")
 
@@ -19,25 +21,31 @@ function App() {
   }
   return (
     <ProfileProvider>
-    <Switch>
+      <Switch>
 
-       <Route exact path="/">
-      <StartupPage/>
-      </Route>
+        <Route exact path="/">
+          <StartupPage />
+        </Route>
 
-      <PublicRouter exact path="/signin">
-      <Signpage Users={Users}/>
-      </PublicRouter>
+        <PublicRouter exact path="/signin">
+          <Signpage Users={Users} />
+        </PublicRouter>
 
-      <PrivateRouter path="/home">
-      <Home/>
-      </PrivateRouter>
+        <PrivateRouter path="/Dashboard">
+          <Home />
+        </PrivateRouter>
 
-      <Route path="/Register">
-        <Register Users={Users} OnusernameChange={OnusernameChange}/>
-      </Route> 
-      
-    </Switch>
+        <Route path="/Register">
+          <Register Users={Users} OnusernameChange={OnusernameChange} />
+        </Route>
+        
+        <Route path="***">
+          <Error />
+        </Route>
+        <Route path="/Dashboard/***">
+          <Error/>
+        </Route>
+      </Switch>
     </ProfileProvider>
 
   )

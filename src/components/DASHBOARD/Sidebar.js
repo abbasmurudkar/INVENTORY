@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Icon} from 'rsuite'
 import styled from 'styled-components'
 import WEBSITE_LOGO from '../../Assets/logo.png'
@@ -13,7 +13,43 @@ const Sidebar = (props) => {
     const { profile } = useProfile()
     //     const {profile} = useProfile()
     const [inactive, setinactive] = useState(false)
+    useEffect(() => {
         props.sideContent(inactive)
+    }, [inactive])
+    
+    const Links = [
+        {
+            to:"/Dashboard",
+            sidelist:"DashBoard",
+            icon:"dashboard"
+        },
+        {
+            to:"/Dashboard/UserProfile",
+            sidelist:"User Profile",
+            icon:"user-circle"
+        },
+        {
+            to:"/Dashboard/Inventory",
+            sidelist:"Create Your Inventory",
+            icon:"edit"
+        },
+        {
+            to:"/Dashboard/Stocks",
+            sidelist:"Stocks",
+            icon:"bar-chart"
+        },
+        {
+            to:"/Dashboard/News",
+            sidelist:"Stocks News",
+            icon:"newspaper-o" 
+        },
+        {
+            to:"/Dashboard/Orders",
+            sidelist:"Orders",
+            icon:"order-form"
+        },
+    ]
+
     return (
         <SideNav>
             <div className={`side-menu ${inactive ? "inactive" : " "}`}>
@@ -37,17 +73,14 @@ const Sidebar = (props) => {
                 <div className='divider'></div>
                 <div className="main-menu">
                     <ul>
-                        <SideList sidelist="DashBoard" icon="dashboard" />
-                        <SideList sidelist="User Profile" icon="user-circle" />
-                        <SideList sidelist="Create Your Inventory" icon="edit" />
-                        <SideList sidelist="Stocks" icon="bar-chart" />
-                        <SideList sidelist="Stocks News" icon="newspaper-o" />
-                        <SideList sidelist="Orders" icon="order-form" />
+                        {Links.map((link,inc)=>{
+                       return <SideList  sidelist={link.sidelist} key={inc} to={link.to} icon={link.icon} />
+                        })}
                     </ul>
                 </div>
                 <div className='side-menu-footer'>
                     <div className='Logout_btn'>
-                        <Button id="btn" block color='red' ><Icon size='md' icon="long-arrow-right"/></Button>
+                        <Button id="btn" block color='red' ><Icon size='lg' icon="long-arrow-right"/></Button>
                     </div>
                     <div className='user-info'>
                        <h4>Logout</h4>
@@ -57,9 +90,7 @@ const Sidebar = (props) => {
         </SideNav>
     )
 }
-
 export default Sidebar
-
 const SideNav = styled.div`
 
     .side-menu{

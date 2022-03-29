@@ -2,19 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Icon } from 'rsuite'
 import styled from 'styled-components'
-const SideList = (props) => {
+const SideList = ({sidelist, icon, to}) => {
     return (
         <ListItem>
-        <li>
-            <Link className='list' to="" >
-            <div className='menu-icon'>
-                <Icon size='2x' className="icon" icon={props.icon} />
-            </div>
-           <span>{props.sidelist}</span> 
-            </Link>
-        </li>
+            <li>
+                <Link className='list' to={to}>
+                    <div className='menu-icon'>
+                        <Icon size='2x' className="icon" icon={icon} />
+                    </div>
+                    <span>{sidelist}</span>
+                </Link>
+            </li>
         </ListItem>
-        )
+    )
 }
 
 export default SideList

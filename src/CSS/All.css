@@ -1,0 +1,455 @@
+.Banner-centr{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center;
+   margin: auto;
+    margin-right: 40px;  */
+    margin-right: 50px;
+    text-align: center;
+    justify-content: center;
+  
+  }
+  
+  .Nav_Head{
+    /* border: 2px solid ; */
+    user-select:none;
+  }
+    .Nav_Head   h1{
+      font-weight: 500;
+      font-size:35px;
+    }
+    .Nav_Text > p{
+        color: #c4990c;
+        font-size:25px ;
+        display: inline-block;
+    }
+  
+    .Nav_Text{
+        /* border:2px solid white; */
+        /* margin-top: 12px; */
+        color: #c4990c;
+        /* font-size: 19px; */
+        user-select:none;
+        font-weight: bolder;
+    }
+  /*Navbar*/
+  
+  .nav-burger{
+    display: none;  
+  cursor: pointer;
+   } 
+   
+   .Nav-All{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    /* border: 2px solid red;*/
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 29px;
+    position:fixed;
+    background-color: black;
+    height: 72px;
+    z-index: 100;
+    /* width: 95%; */
+    width: 100%;
+    /* top: 0; */
+   }
+  
+  
+   /*Features.css*/
+  
+   .head-title{
+    text-align: center;
+    margin-top: 30px;
+    color: black;
+    font-weight: 550;
+  font-style: italic;
+  text-decoration: underline;
+  
+  }
+  .mixed{
+    display: flex;
+  margin-top: 50px;
+  
+  }
+  .first{
+    /* margin-left: 10%; */
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  
+  }
+  .first img{
+    width: 100%;
+    height: 530px; 
+    object-fit: contain;
+   
+  }
+  .second-s{
+    margin-left: 10%;
+    /* text-align: right; */
+   
+  }
+  .second-image-s{
+  width: 60px;
+   object-fit: contain;
+  }
+  .another-s{
+  display: flex; 
+  flex-direction: column;
+  margin-bottom: 40px;
+    /* background-color: red; */
+    /* flex-wrap: wrap; */
+  }
+  .start-s{
+    display: flex;
+  }
+  .writen-s{
+    margin-left: 10px;
+  }
+  .hds-s{
+    color: black;
+    font-weight: 550;
+    font-size: 25px;
+    font-family: sans-serif;
+  }
+  .paraa-s{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    /* flex: 33.33%; */
+    max-width: 500px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#4a4a4a;
+  } 
+  
+  
+  
+  @media  screen and (max-width: 940px){
+  /*Navbar*/
+  
+      .Nav_Navigation{ 
+        /* display: flex;     
+      flex-direction: column;     */
+       width: 70%;
+     position: absolute; 
+     top: 70px;  
+     left: -110%; 
+     opacity: 1;
+    border-top: 1px solid wheat; 
+    /* display: flex; 
+     flex-wrap: wrap;  */
+    /* left: -100%; */
+    height: 500px;
+     background-color: #060b26; 
+     max-width: max-content; 
+    
+    }   
+    
+    .Nav_Logo{
+      margin-left: -15px;
+      margin-top: 15px;
+    }
+    
+    .Nav_Menu {
+      left: 0; 
+      opacity: 1;
+      z-index: 1;
+      transition: all .5s ease;
+      flex-direction: column;    
+      display: flex;   
+      /* visibility: hidden; */
+  }
+  
+  
+    
+    .nav-burger{
+     display: block;
+     /* color: orangered;   */
+     color: #c4990c;
+     top:15px;
+     font-weight: 600;
+     position: absolute;  
+     /* right: 5px;   */
+     /* transform: translate(-100%, 60%);     */
+     font-size: 1.8rem;
+     left: 10px;
+     cursor: pointer;
+     /* background-color: red; */
+     }
+    
+    
+     .Nav_Head{
+      margin-top: 90px;
+      font-size: 6px;
+      }
+      
+      .Nav_btn{
+      margin: 2px 17px;
+      margin-top: 10px;
+      color:red;
+      
+      margin-left: 0%;
+      }
+      
+      .Nav_btn Button{
+      margin: 7px 13px;
+      
+      }
+    
+      .Nav-All{
+      background: none;
+      /* width: fit-content; */
+      /* max-width: 300px; */
+      margin-top: 10px;
+       position: relative;
+      }
+      
+      /* BannerText */
+  
+      .Banner-centr{
+          height: max-content;
+          min-width: fit-content;
+           align-items: center; 
+          /* text-align: center;
+          justify-content: center; */
+           margin-left: 20px; 
+      }
+      
+      
+      .Nav_Head{
+          font-family: 'Times New Roman', Times, serif;
+         
+      }
+      
+      .Nav_Head  h1{
+          font-size: 13px;
+      }
+      
+      .Nav_Text p{
+          font-size: 20px;
+          /* color: red; */
+          /* max-width: 900px; */
+          max-width: 264px;
+      }
+      
+  
+  
+      /*About*/
+  
+      #About{
+          height: max-content;
+         /* width: max-content;  */
+          /* align-items: center; */
+          /* display: flex;
+          flex-direction: column; */
+         margin-top: 16%;
+         text-align: center;
+         justify-content: center;
+         /* margin-left: -30px; */
+      }
+  
+    .herd{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+         width: max-content;
+         margin-bottom: 27px;
+    }
+  
+  .headm > h2{
+     font-size: 22px;
+     margin-top: 25px;
+  }
+  
+  
+  
+     /*Aboutabs*/
+   
+     .Abouttab-All{
+      /* height: max-content;
+      min-width: fit-content;
+    align-items: center;
+    background-color: white; */
+    display: none;
+  
+   }
+  
+  
+  /* .Head{
+    text-align: center;
+    justify-content: center;
+  
+  }
+   .Head h2{
+     font-size: 19px;
+   }
+  
+   .Head p{
+   font-size: 14px;
+   max-width: 306px;
+   margin-left: auto;
+   margin-right: auto; 
+   margin-top: -15px;
+   }
+  
+  .M-tabs{
+     display: flex;
+     flex-direction: column-reverse; */
+   
+  
+  
+  
+    /*Features*/
+  
+    .Features-All{
+  
+      /* text-align: center; */
+    
+    text-align: center;
+    justify-content: center;
+      /* height: max-content;
+       width: max-content;  */
+  }
+  
+   .mixed{
+       display: flex;
+       flex-direction: column;
+       align-items: center;  
+      height: max-content;
+     width: max-content;
+     /* text-align: center;
+     justify-content: center; */
+   }
+  
+  
+    .first img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-left: 50px;
+  }
+  
+   .first{
+       height: max-content;
+       width: max-content;
+    margin-top: -25px;
+   }
+  
+  .head-title{
+  font-size: 25px;
+   /* height: max-content;
+   width: max-content; */
+   align-items: center;
+  margin-top: 90px;
+   /* margin-left: 71px; */
+   
+  }
+  
+  
+  
+  .second-s{
+     display: flex;
+     flex-direction: column;
+     height: max-content;
+     width: max-content;
+     margin-top: 20px;
+     margin-left: 20px;
+  }
+  
+  .second-image-s{
+   width: 11%;
+   max-height: 50px;
+  object-fit: contain;
+  margin-top: 0px;
+  }
+  .another-s{
+   flex: 3.33%;  
+   max-width: 294px;
+  
+  }
+  
+  .hds-s{
+     font-size: 18px;
+  }
+  
+  .paraa-s{
+     font-size: 14px;
+  }
+  
+    /*Footer*/
+  .row{
+    display: none;
+  }
+  
+    .background-Footer{
+      /* display: flex; */
+      /* flex-direction: column; */
+      height: max-content;
+       /* width: min-content;  */
+       text-align: center;
+      justify-content: center; 
+      /* margin-left: 0;
+      margin-right: 0; */
+     margin-left: -4%;
+  }
+  
+  .colum{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  
+  
+  .end-footn{
+      margin-top: 10px;
+      display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+  }
+  
+  .end-linem{
+  font-size: 15px;
+  /* flex-wrap: wrap; */
+  /* max-width: 250px; */
+   flex: 33.33%;  
+  max-width: 284px;
+  /* margin-bottom: 40px; */
+    margin: 13px 31px; 
+  }
+  
+   .two-imgn{
+    text-align: left; 
+     margin-left: 5%;  
+    display: flex;
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* .lon{
+   list-style: none;
+  }
+  
+  .topns{
+    border-top: 1px solid lightgray;
+     width: 80%;
+  margin: 40px auto; 
+  }   */
+  
+  .hr-line{
+    border-top: 1px solid lightgray;
+    width: 80%;
+  margin: 40px auto; 
+  }
+  
+  
+  
+  /*Circle.js*/
+  
+  .wrapper{
+   display: none;
+  } 
+  
+  }
