@@ -17,7 +17,7 @@ const Dashboard = () => {
         setinactive(inactive)
       }} />
       <div className={`Dashboard ${inactive ? "inactive" : " "}`}>
-        <div className='dashboard-Nav'>
+        <div className='Dashboard-Nav'>
           <DashboardNav />
         </div>
         <Switch>
@@ -48,7 +48,8 @@ const MainBoard = styled.div`
 .Dashboard {
   margin-left: 300px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+  padding:  50px;
+  border:2px solid red ;
   transition: margin-left 0.3s ease-in ;
 }
 
