@@ -1,22 +1,14 @@
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Button, Icon} from 'rsuite'
 import styled from 'styled-components'
 import WEBSITE_LOGO from '../../Assets/logo.png'
 import { useProfile } from '../../context/Profile.context'
-import CloseIcon from '@rsuite/icons/Close';
-import MenuIcon from '@rsuite/icons/Menu';
-import "../../CSS/Sidebar.css"
 import SideList from './SideList'
-import ProfileAvatar from './ProfileAvatar'
+// import ProfileAvatar from './ProfileAvatar'
 const Sidebar = (props) => {
     const { profile } = useProfile()
-    //     const {profile} = useProfile()
-    const [inactive, setinactive] = useState(false)
-    useEffect(() => {
-        props.sideContent(inactive)
-    }, [inactive])
-    
+ 
     const Links = [
         {
             to:"/Dashboard",
@@ -52,22 +44,16 @@ const Sidebar = (props) => {
 
     return (
         <SideNav>
-            <div className={`side-menu ${inactive ? "inactive" : " "}`}>
+            <div className="side-menu">
                 <div className='top-section'>
                     <div className='logo'>
                         <img src={WEBSITE_LOGO} alt="Loading" />
                     </div>
                     <div className='toogle-menu' >
-                        <Button className="btn" onClick={() => setinactive(!inactive)}>
-                            {inactive ? <MenuIcon /> : <CloseIcon />}
-                        </Button>
                     </div>
                     <div className='Profile-Name'>
-                        {inactive ?
-                                <ProfileAvatar src={profile.Avatar} name={profile.Name} className="font-bolder"/>
-                            :
+                                {/* // <ProfileAvatar src={profile.Avatar} name={profile.Name} className="font-bolder"/> */}
                             <h4>Hi, {profile.Name}</h4>
-                        }
                     </div>
                 </div>
                 <div className='divider'></div>
@@ -92,10 +78,10 @@ const Sidebar = (props) => {
 }
 export default Sidebar
 const SideNav = styled.div`
-
     .side-menu{
         position:fixed ;
         background: #000 ;
+        border-radius:0px 10px 10px 0px;
         width:300px ;
         height:100% ;
         box-sizing:border-box ;
@@ -148,6 +134,7 @@ const SideNav = styled.div`
     .main-menu{margin: 5px 0;}
 
         .side-menu-footer{
+            border-radius:0px 0px 10px 0px ;
             width:100% ;
             height:100px ;
             background:#333 ;

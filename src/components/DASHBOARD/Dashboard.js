@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Sidebar from './Sidebar'
-import "../../CSS/Sidebar.css"
 import { Route, Switch } from 'react-router-dom'
 import DashboardNav from './DashboardNav'
 import UserProfile from '../DasboardList/UserProfile'
@@ -49,7 +48,7 @@ const MainBoard = styled.div`
   margin-left: 300px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding:  50px;
-  border:2px solid red ;
+  /* border:2px solid red ; */
   transition: margin-left 0.3s ease-in ;
 }
 
