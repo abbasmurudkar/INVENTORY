@@ -6,14 +6,6 @@ import Navbar from '../components/StartupPage/Banner/Navbar';
 import Features from '../components/StartupPage/Features/Features';
 import Footer from '../components/StartupPage/FOOTER/Footer';
 function StartupPage() {
-    // const AboutSection = useRef(null)
-
-    // const gotoAboutSection = () =>{
-    //     window.scrollTo({
-    //         top: AboutSection.current.offsetTop, 
-    //         behavior: 'smooth'
-    //     })
-    // }
     const title = "ROOZ"
     return (
         <FrontPage>

@@ -5,13 +5,12 @@ import styled from 'styled-components'
 import WEBSITE_LOGO from '../../Assets/logo.png'
 import { useProfile } from '../../context/Profile.context'
 import SideList from './SideList'
-// import ProfileAvatar from './ProfileAvatar'
 const Sidebar = (props) => {
     const { profile } = useProfile()
  
     const Links = [
         {
-            to:"/Dashboard",
+            to:"/Dashboard/Home",
             sidelist:"DashBoard",
             icon:"dashboard"
         },
@@ -52,7 +51,6 @@ const Sidebar = (props) => {
                     <div className='toogle-menu' >
                     </div>
                     <div className='Profile-Name'>
-                                {/* // <ProfileAvatar src={profile.Avatar} name={profile.Name} className="font-bolder"/> */}
                             <h4>Hi, {profile.Name}</h4>
                     </div>
                 </div>
