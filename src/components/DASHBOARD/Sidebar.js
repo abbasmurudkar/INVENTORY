@@ -10,7 +10,7 @@ const Sidebar = (props) => {
  
     const Links = [
         {
-            to:"/Dashboard/Home",
+            to:"/Dashboard",
             sidelist:"DashBoard",
             icon:"dashboard"
         },
@@ -78,7 +78,7 @@ export default Sidebar
 const SideNav = styled.div`
     .side-menu{
         position:fixed ;
-        background: #000 ;
+        background: #091135; ;
         border-radius:0px 10px 10px 0px;
         width:300px ;
         height:100% ;
@@ -135,7 +135,7 @@ const SideNav = styled.div`
             border-radius:0px 0px 10px 0px ;
             width:100% ;
             height:100px ;
-            background:#333 ;
+            background:black ;
             position:absolute ;
             bottom:0 ;
             padding:  20px;

@@ -10,8 +10,8 @@ import PrivateRouter from "./components/PrivateRouter";
 import PublicRouter from "./components/PublicRouter";
 import Register from "./components/SIGNPAGE/Register";
 import { ProfileProvider } from "./context/Profile.context";
-import Dashboard from "./components/DASHBOARD/Dashboard";
 import Error from "./components/ERROR/Error";
+import Dashboard from "./components/DasboardList/Dashboard";
 function App() {
   const [Users, setUsers] = useState("")
 
@@ -31,7 +31,7 @@ function App() {
           <Signpage Users={Users} />
         </PublicRouter>
 
-        <PrivateRouter path="/Dashboard">
+        <PrivateRouter path="/Dashboard">  
           <Home />
         </PrivateRouter>
 
