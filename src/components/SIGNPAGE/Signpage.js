@@ -117,7 +117,7 @@ function Signpage({Users}) {
                                 <Button onClick={onGithubLogin} className='github' block size='lg' type="submit">
                                     <Icon size='lg' icon="github" /> Login with Github
                                 </Button>
-                                <p className='mt-5 text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
+                                <p className=' text-center'>Create Your BROOZ Account Now?<span className='text-blue cursor-pointer'><Link to="/Register">Register Now</Link></span></p>
                             </div>
                         </Panel>
 

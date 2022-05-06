@@ -9,6 +9,7 @@ import UserProfile from '../components/DasboardList/UserProfile'
 import Dashboard from '../components/DasboardList/Dashboard'
 import DashboardNav from '../components/DASHBOARD/DashboardNav'
 import Sidebar from '../components/DASHBOARD/Sidebar'
+import ShowSymbol from '../components/DasboardList/SubFiles/ShowSymbol'
 
 const Home = () => {
   return (
@@ -22,23 +23,26 @@ const Home = () => {
           <Switch>
             <Route path="/Dashboard">
               <Route exact path="/Dashboard">
-              <Dashboard />
+                <Dashboard />
               </Route>
-            <Route path="/Dashboard/UserProfile">
-              <UserProfile />
-            </Route>
-            <Route path="/Dashboard/Inventory">
-              <Inventory />
-            </Route>
-            <Route path="/Dashboard/Stocks">
-              <Stocks />
-            </Route>
-            <Route path="/Dashboard/News">
-              <StocksNews />
-            </Route>
-            <Route path="/Dashboard/Orders">
-              <Orders />
-            </Route>
+              <Route  path="/Dashboard/UserProfile">
+                <UserProfile />
+              </Route>
+              <Route path="/Dashboard/Inventory">
+                <Inventory />
+              </Route>
+              <Route  path="/Dashboard/Stocks">
+                <Stocks />
+              </Route>
+              <Route path="/Dashboard/News">
+                <StocksNews />
+              </Route>
+              <Route  path="/Dashboard/Orders">
+                <Orders />
+              </Route>
+              <Route  path="/Dashboard/Stocks/:id">
+                <ShowSymbol />
+              </Route>
             </Route>
           </Switch>
         </div>

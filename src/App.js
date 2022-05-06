@@ -12,6 +12,7 @@ import Register from "./components/SIGNPAGE/Register";
 import { ProfileProvider } from "./context/Profile.context";
 import Error from "./components/ERROR/Error";
 import Dashboard from "./components/DasboardList/Dashboard";
+import ShowSymbol from "./components/DasboardList/SubFiles/ShowSymbol";
 function App() {
   const [Users, setUsers] = useState("")
 
@@ -31,20 +32,18 @@ function App() {
           <Signpage Users={Users} />
         </PublicRouter>
 
-        <PrivateRouter path="/Dashboard">  
+        <PrivateRouter path="/Dashboard">
           <Home />
         </PrivateRouter>
 
         <Route path="/Register">
           <Register Users={Users} OnusernameChange={OnusernameChange} />
         </Route>
-        
+
         <Route path="***">
           <Error />
         </Route>
-        <Route path="/Dashboard/***">
-          <Error/>
-        </Route>
+     
       </Switch>
     </ProfileProvider>
 

@@ -43,7 +43,7 @@ function Carosuel({ state,isLoading }) {
 
 export default Carosuel
 
-const Carousel = styled.div`
+export const Carousel = styled.div`
 .red{
 color:red ;
 }
