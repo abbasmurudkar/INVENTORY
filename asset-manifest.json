@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/INVENTORY/static/css/main.639b14d2.css",
-    "main.js": "/INVENTORY/static/js/main.247e19f5.js",
+    "main.css": "/INVENTORY/static/css/main.602f3005.css",
+    "main.js": "/INVENTORY/static/js/main.929226dc.js",
     "static/js/787.7ee10963.chunk.js": "/INVENTORY/static/js/787.7ee10963.chunk.js",
     "static/media/logo.png": "/INVENTORY/static/media/logo.096968937f6876832669.png",
     "static/media/bg20.jpeg": "/INVENTORY/static/media/bg20.94582c2fb458d1e133c4.jpeg",
@@ -9,17 +9,22 @@
     "static/media/bg.jpg": "/INVENTORY/static/media/bg.c9193174b50c1d9904d9.jpg",
     "static/media/bg6.jpeg": "/INVENTORY/static/media/bg6.476de3546fe78bb649c0.jpeg",
     "static/media/bg21.jpeg": "/INVENTORY/static/media/bg21.6311df1c882a91bf72ec.jpeg",
+    "static/media/No-Matches.png": "/INVENTORY/static/media/No-Matches.09cde79fd03b6eb55494.png",
     "static/media/ipo.png": "/INVENTORY/static/media/ipo.53302aa6dcd82a25f863.png",
     "static/media/futures.png": "/INVENTORY/static/media/futures.df4c98a099c7d3a86c9a.png",
     "static/media/mf.png": "/INVENTORY/static/media/mf.d2fbff07c7c1d96ee112.png",
     "static/media/stocks.png": "/INVENTORY/static/media/stocks.7319b1fbb89e905ddf26.png",
+    "static/media/slick.svg": "/INVENTORY/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/INVENTORY/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/INVENTORY/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/INVENTORY/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/INVENTORY/index.html",
-    "main.639b14d2.css.map": "/INVENTORY/static/css/main.639b14d2.css.map",
-    "main.247e19f5.js.map": "/INVENTORY/static/js/main.247e19f5.js.map",
+    "main.602f3005.css.map": "/INVENTORY/static/css/main.602f3005.css.map",
+    "main.929226dc.js.map": "/INVENTORY/static/js/main.929226dc.js.map",
     "787.7ee10963.chunk.js.map": "/INVENTORY/static/js/787.7ee10963.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.639b14d2.css",
-    "static/js/main.247e19f5.js"
+    "static/css/main.602f3005.css",
+    "static/js/main.929226dc.js"
   ]
 }
