@@ -12,6 +12,7 @@ import Sidebar from '../components/DASHBOARD/Sidebar'
 import ShowSymbol from '../components/DasboardList/SubFiles/ShowSymbol'
 
 const Home = () => {
+
   return (
     <MainBoard>
       <Sidebar />
@@ -40,7 +41,7 @@ const Home = () => {
               <Route  path="/Dashboard/Orders">
                 <Orders />
               </Route>
-              <Route  path="/Dashboard/Stocks/:id">
+              <Route  path="/Dashboard/Data/:id">
                 <ShowSymbol />
               </Route>
             </Route>

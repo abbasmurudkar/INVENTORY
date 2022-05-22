@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Icon, Input, InputGroup } from 'rsuite'
 import styled from 'styled-components'
-import { api_key, searchengine } from '../Api'
+import { api_key, url } from '../Api'
 import FadeIn from 'react-fade-in/lib/FadeIn';
 import { Carousel } from '../ADDTIONAL COMPONENT/Active-Carosuel';
 import StocksEngine from '../ADDTIONAL COMPONENT/Stocks-Engine';
 import NoMatches from "../../Assets/No-Matches.png"
 const Stocks = () => {
+
   const [Value, setValue] = useState("")
   const [Result, setResult] = useState(null)
   const Values = (value) => {
@@ -18,7 +19,7 @@ const Stocks = () => {
     }
   }
   const Onsearch = () => {
-    fetch(`${searchengine}?query=${Value}&limit=100&${api_key}`).then((res) => res.json()).then((result) =>{
+    fetch(`${url}search-name/?query=${Value}&limit=100&${api_key}`).then((res) => res.json()).then((result) =>{
 
       console.log(result)
      setResult(result)

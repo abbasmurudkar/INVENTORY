@@ -13,19 +13,19 @@ const Dashboard = () => {
   const [Gainers, setGainers] = useState([])
   const [isLoading, setisLoading] = useState(true)
   useEffect(() => {
-  fetchData()
-  setisLoading(false)
+    fetchData()
+    setisLoading(false)
   }, [])
 
-  const fetchData = ()=>{
-    // const active = `${url}actives?${api_key}`;
-    // const losers = `${url}losers?${api_key}`;
-    // const gainers = `${url}gainers?${api_key}`
+  const fetchData = () => {
+    // const active = `${url}stock_market/actives?${api_key}`;
+    // const losers = `${url}stock_market/losers?${api_key}`;
+    // const gainers = `${url}stock_market/gainers?${api_key}`;
     // const getactive = axios.get(active)
-    // const getlosers= axios.get(losers)
-    // const getgainers= axios.get(gainers)
+    // const getlosers = axios.get(losers)
+    // const getgainers = axios.get(gainers)
 
-    // axios.all([getactive, getlosers, getgainers]).then(axios.spread((...allData)=>{
+    // axios.all([getactive, getlosers, getgainers]).then(axios.spread((...allData) => {
     //   const data = allData[0]
     //   const datatwo = allData[1]
     //   const datathree = allData[2]
@@ -67,7 +67,7 @@ const Dashboard = () => {
               <div className='header-line' />
             </div>
             <div className='Blocks'>
-              <Carosuel state={MostActive} isLoading={!isLoading}/>
+              <Carosuel state={MostActive} isLoading={!isLoading} />
             </div>
           </Box1>
           <Box1>
@@ -76,7 +76,7 @@ const Dashboard = () => {
               <div className='header-line' />
             </div>
             <div className='Blocks'>
-        <Carosuel state={Gainers} isLoading={!isLoading}/>
+              <Carosuel state={Gainers} isLoading={!isLoading} />
             </div>
           </Box1>
           <Box1>
@@ -85,7 +85,7 @@ const Dashboard = () => {
               <div className='header-line' />
             </div>
             <div className='Blocks'>
-              <Carosuel state={Losers} isLoading={!isLoading}/>
+              <Carosuel state={Losers} isLoading={!isLoading} />
             </div>
           </Box1>
         </Blocks>
