@@ -1,6 +1,5 @@
     import React from 'react';
     import Plot from 'react-plotly.js';
-    // import { withRouter } from "react-router-dom";
     
     class Stock extends React.Component {
       constructor(props) {
@@ -17,8 +16,7 @@
       }
     
       fetchStock() {
-        //   const {id} = this.props.match.params.id;
-          const pointerToThis = this;
+        const pointerToThis = this;
         const API_KEY = 'HGJWFG4N8AQ66ICD';
         let StockSymbol = this.props.id;
         console.log(StockSymbol)
@@ -63,7 +61,7 @@
                   marker: {color: 'red'},
                 }
               ]}
-              layout={{width: 1000, height: 450, title: 'GRAPH'}}
+              layout={{width: 1100, height: 450, title: 'GRAPH'}}
             />
           </div>
         )
