@@ -39,7 +39,6 @@
                 stockChartYValuesFunction.push(data['Time Series (Daily)'][key]['1. open']);
               }
     
-              // console.log(stockChartXValuesFunction);
               pointerToThis.setState({
                 stockChartXValues: stockChartXValuesFunction,
                 stockChartYValues: stockChartYValuesFunction
