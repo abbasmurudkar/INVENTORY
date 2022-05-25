@@ -1,11 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { List } from 'rsuite'
+import { Alert, Button, List } from 'rsuite'
 import styled from 'styled-components'
 import { api_key, url } from '../../Api'
 import Chart from './Chart'
-
+import Logo from '../../../Assets/logo.png'
 function ShowSymbol() {
   const { id } = useParams()
   const [data, setData] = useState([])
@@ -15,7 +15,54 @@ function ShowSymbol() {
       .then((result) => { setData(result) })
   }, [id])
   console.log(data)
+  const loadScript = (src) => {
+    return new Promise((resovle) => {
+      const script = document.createElement("script");
+      script.src = src;
 
+      script.onload = () => {
+        resovle(true);
+      };
+
+      script.onerror = () => {
+        resovle(false);
+      };
+
+      document.body.appendChild(script);
+    });
+  }
+  const displayrazorpay = async (amount) =>{
+  const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+console.log(res)
+  if(!res){
+    Alert("your are offline failed to load razorpay",4000)
+  return;
+  }
+  const options = {
+    key: "rzp_test_mNj333YrVgR9NC",
+    key_secret: "cYdkhX47xesmmCeGGpKOzyrG",
+    currency: "USD",
+    amount:amount *100,
+    name: "BROOZ STOCKS",
+    description: "THANKS FOR PURCHASING",
+    image :`${Logo}`,
+    handler: function (response) {
+      Alert(response.razorpay_payment_id,4000)
+      Alert("payment successful",4000)
+    },
+    prefill:{
+      name: "ABBAS MURUDKAR"
+    },
+    notes: {
+      address: "Razorpay Corporate Office"
+  },
+    theme: {
+      color: "#3399cc",
+  }
+  };
+  const paymentOnject = new window.Razorpay(options)
+  paymentOnject.open()
+}
   return (
     <Body className="Symbol-body">
       <div className='Symbol-header'>
@@ -60,6 +107,7 @@ function ShowSymbol() {
             </div>
           )
         })}
+        <Button onClick={()=> displayrazorpay(data.map((item)=>item.price))} style={{marginTop:"30px"}}block color="green">Buy Now</Button>
       </div>
     </Body>
 
@@ -157,5 +205,9 @@ width:100% ;
       font-size:16px ;
     }
   }
+}
+button{
+  font-size:20px ;
+  font-weight:bolder ;
 }
 `;
