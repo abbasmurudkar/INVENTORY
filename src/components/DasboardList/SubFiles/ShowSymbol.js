@@ -124,13 +124,10 @@ const Body = styled.div`
 }
 margin-top:120px ;
 user-select:none ;
-/* border:2px solid red ; */
 width:100% ;
 .Symbol-header{
-  /* border:2px solid green ; */
   margin-bottom:10px ;
   .Symbol-sym{
-    /* border:2px solid violet ; */
     h4{
       font-size:25px;
       margin-top:20px ;
@@ -148,12 +145,10 @@ width:100% ;
     }
     .Symbol-table{
       display:flex ;
-      /* border:2px solid red ; */
       justify-content:center ;
       align-items:center ;
       margin-top:20px ;
       .table-1,.table-2{
-        /* border:2px solid green; */
         width:50% ;
         padding-left:30px ;
         border-right:2px solid gray ;
@@ -167,8 +162,6 @@ width:100% ;
           border:none ;
         }
         .rs-list-item {
-          /* background-color:none ; */
-          /* -webkit-box-shadow: none; */
           box-shadow:none;
         
         }
@@ -180,7 +173,6 @@ width:100% ;
       
     }
     .chart-bar{
-      /* border:2px solid red ; */
       width:100% ;
       height:500px ;
     }
