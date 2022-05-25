@@ -101,6 +101,4 @@ button{
   }
 }
 `
-const Comp = styled.div`
-color:red;
-`
+
