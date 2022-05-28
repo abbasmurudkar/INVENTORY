@@ -8,10 +8,14 @@ import Logo from '../../../Assets/logo.png'
 function ShowSymbol() {
   const { id } = useParams()
   const [data, setData] = useState([])
+  const [prices, setPrice] = useState()
   useEffect(() => {
     fetch(`${url}/profile/${id}?${api_key}`)
       .then((res) => res.json())
-      .then((result) => { setData(result) })
+      .then((result) => {
+        setData(result) 
+        const p = result[0].price
+        setPrice(p)})
   }, [id])
   console.log(data)
   const loadScript = (src) => {
@@ -30,87 +34,88 @@ function ShowSymbol() {
       document.body.appendChild(script);
     });
   }
-  const displayrazorpay = async (amount) =>{
-  const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
-console.log(res)
-  if(!res){
-    Alert("your are offline failed to load razorpay",4000)
-  return;
-  }
-  const options = {
-    key: "rzp_test_mNj333YrVgR9NC",
-    key_secret: "cYdkhX47xesmmCeGGpKOzyrG",
-    currency: "USD",
-    amount:amount *100,
-    name: "BROOZ STOCKS",
-    description: "THANKS FOR PURCHASING",
-    image :`${Logo}`,
-    handler: function (response) {
-      Alert(response.razorpay_payment_id,4000)
-      Alert("payment successful",4000)
-    },
-    prefill:{
-      name: "ABBAS MURUDKAR"
-    },
-    notes: {
-      address: "Razorpay Corporate Office"
-  },
-    theme: {
-      color: "#3399cc",
+  const displayrazorpay = async (amount) => {
+    const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+    if (!res) {
+      alert("your are offlibe failed to load razorpay")
+      return;
+    }
+    const options = {
+      key: "rzp_test_mNj333YrVgR9NC",
+      key_secret: "cYdkhX47xesmmCeGGpKOzyrG",
+      currency: "USD",
+      amount: amount * 100,
+      name: "BROOZ MEALS",
+      description: "THANKS FOR PURCHASING",
+      image : `${Logo}`,
+        handler: function (response) {
+          alert(response.razorpay_payment_id)
+          alert("Payment Successful, Order Purchased")
+        },
+prefill: {
+  name: "ABBAS MURUDKAR"
+},
+notes: {
+  address: "Razorpay Corporate Office"
+},
+theme: {
+  color: "#3399cc",
   }
   };
-  const paymentOnject = new window.Razorpay(options)
-  paymentOnject.open()
+const paymentOnject = new window.Razorpay(options)
+paymentOnject.open()
 }
-  return (
-    <Body className="Symbol-body">
-      <div className='Symbol-header'>
-        {data.map((item, key) => {
-          return (
-            <div key={key} className='Symbol-sym'>
-              <img src={item.image} alt='Loading' />
-              <h2>{item.companyName}</h2>
-              <div className='header-line' />
-              <div className='Symbol-ceo'>{item.ceo}</div>
-              <div className='chart-bar'>
-                <Chart id={id} />
-              </div>
-              <div className='Symbol-Info'>
-                <p>{item.description}</p>
-              </div>
-              <h4>FUNDAMENTALS:-</h4>
-              <div className='header-line' />
-              <div className='header-line' />
-
-              <div  className='Symbol-table'>
-
-                <div   className='table-1'>
-                  <List >
-                    <List.Item><p>mktCap: {item.mktCap}</p></List.Item>
-                    <List.Item><p>volAvg: {item.volAvg}</p></List.Item>
-                    <List.Item >Price: <p style={{display:"inline-block"}} className={item.price>0?"green":"red"}>{item.price}</p></List.Item>
-                    <List.Item><p>IpoDate: {item.ipoDate}</p></List.Item>
-                    
-                  </List>
-                </div>
-                <div className='table-2'>
-                  <List>
-                    <List.Item>Changes: <p style={{display:"inline-block"}}  className={item.changes>0?"green":"red"}>{item.changes}</p></List.Item>
-                    <List.Item><p>Range: {item.range}</p></List.Item>
-                    <List.Item><p>LastDiv: {item.lastDiv}</p></List.Item>
-                    <List.Item><p>State: {item.state?item.state:"No City Mention"}</p></List.Item>
-                  </List>
-                </div>
-              </div>
-
+return (
+  <Body className="Symbol-body">
+    <div className='Symbol-header'>
+      {data.map((item, key) => {
+        return (
+          <div key={key} className='Symbol-sym'>
+            <img src={item.image} alt='Loading' />
+            <h2>{item.companyName}</h2>
+            <div className='header-line' />
+            <div className='Symbol-ceo'>{item.ceo}</div>
+            <div className='chart-bar'>
+              <Chart id={id} />
             </div>
-          )
-        })}
-        <Button onClick={()=> displayrazorpay(data.map((item)=>item.price))} style={{marginTop:"30px"}}block color="green">Buy Now</Button>
-      </div>
-    </Body>
+            <div className='Symbol-Info'>
+              <p>{item.description}</p>
+            </div>
+            <h4>FUNDAMENTALS:-</h4>
+            <div className='header-line' />
+            <div className='header-line' />
 
-  )
+            <div className='Symbol-table'>
+
+              <div className='table-1'>
+                <List >
+                  <List.Item><p>mktCap: {item.mktCap}</p></List.Item>
+                  <List.Item><p>volAvg: {item.volAvg}</p></List.Item>
+                  <List.Item >Price: <p style={{ display: "inline-block" }} className={item.price > 0 ? "green" : "red"}>{item.price}</p></List.Item>
+                  <List.Item><p>IpoDate: {item.ipoDate}</p></List.Item>
+
+                </List>
+              </div>
+              <div className='table-2'>
+                <List>
+                  <List.Item>Changes: <p style={{ display: "inline-block" }} className={item.changes > 0 ? "green" : "red"}>{item.changes}</p></List.Item>
+                  <List.Item><p>Range: {item.range}</p></List.Item>
+                  <List.Item><p>LastDiv: {item.lastDiv}</p></List.Item>
+                  <List.Item><p>State: {item.state ? item.state : "No City Mention"}</p></List.Item>
+                </List>
+              </div>
+            </div>
+
+          </div>
+        )
+      })}
+
+      <Button onClick={() => displayrazorpay(Math.floor(prices))} style={{ marginTop: "30px" }} block color="green">Buy Now</Button>
+
+    </div>
+  </Body>
+
+)
 }
 
 export default ShowSymbol

@@ -91,7 +91,7 @@ function Signpage({Users}) {
                                     <InputGroup>
                                         <Input type='text' value={Email} onChange={OnuserChange} id="user" />
                                         <InputGroup.Button>
-                                            <Icon icon="user" />
+                                            <Icon icon="user" style={{color:"black"}} />
                                         </InputGroup.Button>
                                     </InputGroup>
                                 </div>
@@ -100,7 +100,7 @@ function Signpage({Users}) {
                                     <InputGroup>
                                         <Input type={show_hide ? "text" : "password"} value={Password} onChange={OnpasswordChange} id="password" />
                                         <InputGroup.Button onClick={Show_Hide}>
-                                            <Icon icon={show_hide ? "eye" : "eye-slash"}></Icon>
+                                            <Icon icon={show_hide ? "eye" : "eye-slash"} style={{color:"black"}}></Icon>
                                         </InputGroup.Button>
                                     </InputGroup>
                                 </div>
