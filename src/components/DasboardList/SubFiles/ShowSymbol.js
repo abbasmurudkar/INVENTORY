@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Alert, Button, List } from 'rsuite'
+import {  Button, List } from 'rsuite'
 import styled from 'styled-components'
 import { api_key, url } from '../../Api'
 import Chart from './Chart'
