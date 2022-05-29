@@ -11,14 +11,14 @@ export const ProfileProvider = ({children}) =>{
     useEffect(()=>{
         let useRef;
        const authUnsub =  auth.onAuthStateChanged(authObj=>{
-            console.log(authObj)
+            // console.log(authObj)
             if(authObj)
             {
                useRef = db.ref(`/profiles/${authObj.uid}`);
                 useRef.on("value",(snap)=>{
                     // console.log("snap",snap) //shows the object 
                     const profiledata = snap.val();
-                    console.log(profiledata) // shows the data of database
+                    // console.log(profiledata) // shows the data of database
                     const {Name , CreatedAt,Avatar} = snap.val() //fetching data from database
                     const data = {
                         Avatar,

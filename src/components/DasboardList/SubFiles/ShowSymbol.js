@@ -17,7 +17,6 @@ function ShowSymbol() {
         const p = result[0].price
         setPrice(p)})
   }, [id])
-  console.log(data)
   const loadScript = (src) => {
     return new Promise((resovle) => {
       const script = document.createElement("script");

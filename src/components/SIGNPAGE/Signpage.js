@@ -14,7 +14,6 @@ function Signpage({Users}) {
     const SigInWithProvider = async (provider) => {
         try {
             const { additionalUserInfo, user } = await auth.signInWithPopup(provider);
-            console.log(additionalUserInfo)
             if (additionalUserInfo.isNewUser) {
                 await db.ref(`/profiles/${user.uid}`).set({
                     Name: user.displayName,

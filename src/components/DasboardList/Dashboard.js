@@ -35,7 +35,6 @@ const Dashboard = () => {
       setisLoading(true)
     }))
   }
-  console.log(isLoading)
   return (
     <FadeIn>
       <Dashboards>

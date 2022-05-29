@@ -19,7 +19,6 @@
         const pointerToThis = this;
         const API_KEY = 'HGJWFG4N8AQ66ICD';
         let StockSymbol = this.props.id;
-        console.log(StockSymbol)
         let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY}`;
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];
@@ -31,9 +30,7 @@
             }
           )
           .then(
-            function(data) {
-              console.log(data);
-    
+            function(data) {    
               for (var key in data['Time Series (Daily)']) {
                 stockChartXValuesFunction.push(key);
                 stockChartYValuesFunction.push(data['Time Series (Daily)'][key]['1. open']);

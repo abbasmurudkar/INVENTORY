@@ -11,14 +11,12 @@ import PublicRouter from "./components/PublicRouter";
 import Register from "./components/SIGNPAGE/Register";
 import { ProfileProvider } from "./context/Profile.context";
 import Error from "./components/ERROR/Error";
-import Dashboard from "./components/DasboardList/Dashboard";
-import ShowSymbol from "./components/DasboardList/SubFiles/ShowSymbol";
+
 function App() {
   const [Users, setUsers] = useState("")
 
   const OnusernameChange = (value) => {
     setUsers(value)
-    console.log(value)
   }
   return (
     <ProfileProvider>

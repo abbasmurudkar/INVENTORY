@@ -20,8 +20,6 @@ const Stocks = () => {
   }
   const Onsearch = () => {
     fetch(`${url}search-name/?query=${Value}&limit=100&${api_key}`).then((res) => res.json()).then((result) =>{
-
-      console.log(result)
      setResult(result)
     }
     )
