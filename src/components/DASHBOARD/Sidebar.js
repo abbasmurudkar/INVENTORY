@@ -51,7 +51,7 @@ const Sidebar = (props) => {
                     <div className='toogle-menu' >
                     </div>
                     <div className='Profile-Name'>
-                            <h4>Hi, {profile.Name}</h4>
+                            <h4>Hey, {profile.Name}</h4>
                     </div>
                 </div>
                 <div className='divider'></div>
