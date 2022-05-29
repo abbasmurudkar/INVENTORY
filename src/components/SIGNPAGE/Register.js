@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import CarouselSlider from './Carousel'
 import { MainContainer } from './Signpage'
 import EmailFill from '@rsuite/icons/EmailFill'
-import { auth } from '../../misc/Firebase'
+import { auth} from '../../misc/Firebase'
 import { useHistory } from 'react-router-dom';
 function Register({Users, OnusernameChange}) {
   const [Password, setPassword] = useState("")
@@ -29,7 +29,7 @@ function Register({Users, OnusernameChange}) {
         if (auth) {
           history.push("/signin")
         }})
-      Alert.success("REGISTER SUCCESSFULL PROCEED TO LOGIN", 4000)
+        Alert.success("REGISTER SUCCESSFULL PROCEED TO LOGIN", 4000)
     }
     catch (err) {
       Alert.info(err.message, 4000)

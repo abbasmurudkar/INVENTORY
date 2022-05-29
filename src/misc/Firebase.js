@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth'
 import 'firebase/database'
+import 'firebase/storage'
 const Config = {
     apiKey: "AIzaSyBtwu1lF0UtkY_PVVNLH8TxEbzLbLI5N6o",
     authDomain: "stocks-management-9495e.firebaseapp.com",

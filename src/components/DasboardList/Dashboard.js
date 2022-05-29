@@ -18,22 +18,22 @@ const Dashboard = () => {
   }, [])
 
   const fetchData = () => {
-    const active = `${url}stock_market/actives?${api_key}`;
-    const losers = `${url}stock_market/losers?${api_key}`;
-    const gainers = `${url}stock_market/gainers?${api_key}`;
-    const getactive = axios.get(active)
-    const getlosers = axios.get(losers)
-    const getgainers = axios.get(gainers)
+    // const active = `${url}stock_market/actives?${api_key}`;
+    // const losers = `${url}stock_market/losers?${api_key}`;
+    // const gainers = `${url}stock_market/gainers?${api_key}`;
+    // const getactive = axios.get(active)
+    // const getlosers = axios.get(losers)
+    // const getgainers = axios.get(gainers)
 
-    axios.all([getactive, getlosers, getgainers]).then(axios.spread((...allData) => {
-      const data = allData[0]
-      const datatwo = allData[1]
-      const datathree = allData[2]
-      setActive(data.data)
-      setLosers(datatwo.data)
-      setGainers(datathree.data)
-      setisLoading(true)
-    }))
+    // axios.all([getactive, getlosers, getgainers]).then(axios.spread((...allData) => {
+    //   const data = allData[0]
+    //   const datatwo = allData[1]
+    //   const datathree = allData[2]
+    //   setActive(data.data)
+    //   setLosers(datatwo.data)
+    //   setGainers(datathree.data)
+    //   setisLoading(true)
+    // }))
   }
   return (
     <FadeIn>
