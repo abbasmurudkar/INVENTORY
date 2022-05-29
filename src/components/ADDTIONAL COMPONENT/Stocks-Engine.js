@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function StocksEngine({symbol,Result}) {
+function StocksEngine({Result}) {
   return (
     <div className='grid'>
       {Result.map((item,index)=>{

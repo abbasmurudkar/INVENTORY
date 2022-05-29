@@ -8,33 +8,32 @@ import { Alert } from 'rsuite';
 import AvatarUploadBtn from './UserProfileComponet/AvatarUploadBtn';
 
 const UserProfile = () => {
-  const {profile}= useProfile()
-  const onSave = async (newData)=>{
+  const { profile } = useProfile()
+  const onSave = async (newData) => {
     const UserNicknameref = db.ref(`/profiles/${profile.uid}`).child('Name');
-    try{
+    try {
       await UserNicknameref.set(newData)
 
       Alert.success('Nickname has been Updated', 4000)
     }
-    catch(err){
-      Alert.error(err.message,4000)
+    catch (err) {
+      Alert.error(err.message, 4000)
     }
   }
   return (
     <Container>
       <FadeIn>
         <Box>
-        <h4>USERPROFILE FOR {profile.Name} </h4>
-        <div className='w-100'>
-        <EditableInput
-        name = "nickname"
-        initialValue={profile.Name}
-        onSave={onSave}
-        label={<h5 style={{fontSize:"18px",marginBottom:"6px",marginTop:"6px"}}>Nickname: </h5>}
-        label2 = {<h5 style={{fontSize:"18px",marginBottom:"6px",marginTop:"6px"}}>Profile Avatar:</h5>}
-        />
-        </div>
-        <AvatarUploadBtn/>
+          <h4>USERPROFILE FOR {profile.Name} </h4>
+          <div className='w-100'>
+            <AvatarUploadBtn id="avatar" />
+            <EditableInput
+              name="nickname"
+              initialValue={profile.Name}
+              onSave={onSave}
+              label={<h5 style={{ fontSize: "18px", marginBottom: "6px", marginTop: "6px" }}>Nickname: </h5>}
+            />
+          </div>
         </Box>
       </FadeIn>
     </Container>)
@@ -49,7 +48,6 @@ padding:20px ;
 display:flex ;
 justify-content:center ;
 align-items:center ;
-border:2px solid red ;
 `;
 const Box = styled.div`
 height:500px ;
@@ -59,7 +57,8 @@ align-items:center ;
 padding:60px;
 padding-top:20px ;
 flex-direction:column ;
-box-shadow:1px 1px 4px 1px  grey ;
+box-shadow:1px 8px 10px   #091135;
+ ;
 border-radius:10px ;
 h4{
   width:100% ;

@@ -33,7 +33,7 @@ function EditableInput({
 
   return (
     <>
-       <div className='input-label w-100'><p >{label}</p></div> 
+       <div className='input-label w-100'>{label}</div> 
         <InputGroup>
         <Input  disabled={!Editable} {...inputProps} placeholder={placeholder} onChange={onInputchange} value={input}/>
         <InputGroup.Button onClick={onEditClick}>
@@ -45,7 +45,6 @@ function EditableInput({
         </InputGroup.Button>
         }
         </InputGroup>
-        <div className='input-label w-100'><p >{label2}</p></div> 
     </>
   )
 }
