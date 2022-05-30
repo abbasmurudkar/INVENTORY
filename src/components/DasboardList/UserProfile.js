@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import FadeIn from 'react-fade-in/lib/FadeIn';
 import { useProfile } from '../../context/Profile.context';
-import EditableInput from './UserProfileComponet/EditableInput';
+import EditableInput from './UserProfile/EditableInput';
 import { db } from '../../misc/Firebase';
 import { Alert } from 'rsuite';
-import AvatarUploadBtn from './UserProfileComponet/AvatarUploadBtn';
+import AvatarUploadBtn from './UserProfile/AvatarUploadBtn';
+import ProviderBlock from './UserProfile/ProviderBlock';
 
 const UserProfile = () => {
   const { profile } = useProfile()
@@ -34,6 +35,7 @@ const UserProfile = () => {
               label={<h5 style={{ fontSize: "18px", marginBottom: "6px", marginTop: "6px" }}>Nickname: </h5>}
             />
           </div>
+          <ProviderBlock/>
         </Box>
       </FadeIn>
     </Container>)
