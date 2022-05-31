@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { auth, db } from '../../misc/Firebase'
 import CarouselSlider from './Carousel'
 import firebase from 'firebase/app'
-import { useProfile } from '../../context/Profile.context'
 
 function Signpage({Users}) {
     const [Email, setEmail] = useState("")

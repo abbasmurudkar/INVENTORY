@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Table } from 'rsuite'
+import { Icon } from 'rsuite'
 import styled from 'styled-components'
 
 const Boxes = ({heading, icon,add}) => {
