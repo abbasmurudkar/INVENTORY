@@ -15,7 +15,6 @@ function StocksNews({ pageSize }) {
       const articles = data.articles
       const total = data.totalResults
       setarticle(articles)
-      console.log(data)
       setisLoading(false)
       setTotalResult(total)
     })
@@ -62,5 +61,4 @@ const News = styled.div`
 margin-top:100px;
 height:100% ;
 padding:10px ;
-
 `;

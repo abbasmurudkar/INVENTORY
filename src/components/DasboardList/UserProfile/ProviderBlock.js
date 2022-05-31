@@ -4,7 +4,6 @@ import { auth } from '../../../misc/Firebase'
 import firebase from 'firebase/app'
 
 function ProviderBlock() {
-    console.log(auth.currentUser)
     const [isConnected, setConnected] = useState({
         'google.com': auth.currentUser.providerData.some((data) => data.providerId === 'google.com'),
         'facebook.com': auth.currentUser.providerData.some((data) => data.providerId === 'facebook.com'),
@@ -94,7 +93,7 @@ function ProviderBlock() {
                     </Button>
                 }
                 {!isConnected['github.com'] &&
-                    <Button block color="white" onClick={linkGithub}>
+                    <Button block onClick={linkGithub}>
                         <Icon icon="github" /> Link to Github
                     </Button>
                 }

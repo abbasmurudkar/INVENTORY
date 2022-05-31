@@ -98,6 +98,7 @@ export default Dashboard
 const Dashboards = styled.div`
 margin-top:100px;
 height:100% ;
+user-select:none ;
 
 `;
 const Blocks = styled.div`

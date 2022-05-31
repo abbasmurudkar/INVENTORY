@@ -11,7 +11,7 @@ function NewsItem({ title, desc, image, UrlLink, author, publishedAt }) {
       <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 300, height: 600 }}>
         <img src={image} height="240" alt='loading' />
 
-        <Panel header={<p>{title}  <Badge  content="99+"/></p>} >
+        <Panel header={<div>{title} <Badge  content="99+"/> </div>} >
 
 
           <p style={{ fontSize: "15px", marginBottom: "10px" }}>
@@ -21,7 +21,7 @@ function NewsItem({ title, desc, image, UrlLink, author, publishedAt }) {
             By {author} on {publishedAt}
           </p>
           <a href={UrlLink} rel="noopener noreferrer" target="_blank">
-            <Button size='lg' color='blue' appearance='Ghost'>Read More </Button>
+            <Button size='lg' color='blue' appearance='ghost'>Read More </Button>
           </a>
         </Panel>
       </Panel>
