@@ -4,7 +4,7 @@ import {  Loader } from 'rsuite'
 function Spinner() {
   return (
 
-          <Loader center vertical size="md" content="Loading" speed='slow'/>
+          <Loader   size="md" content="Loading" speed='slow'/>
   )
 }
 
