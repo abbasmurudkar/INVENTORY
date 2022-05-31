@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon, Table } from 'rsuite'
 import styled from 'styled-components'
 
-const Boxes = ({heading, icon, dynamic,icon2}) => {
+const Boxes = ({heading, icon,add}) => {
   return (
     <Box>
         <div className='header'>
@@ -10,7 +10,7 @@ const Boxes = ({heading, icon, dynamic,icon2}) => {
         <span><Icon id="icon" icon={icon}/></span>
         </div>
         <hr className='header-line'/>
-        <p>24242</p>
+        <p>456465</p>
     </Box>
   )
 }

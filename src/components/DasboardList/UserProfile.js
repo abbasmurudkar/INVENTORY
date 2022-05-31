@@ -35,7 +35,9 @@ const UserProfile = () => {
               label={<h5 style={{ fontSize: "18px", marginBottom: "6px", marginTop: "6px" }}>Nickname: </h5>}
             />
           </div>
+          <div className='w-100'>
           <ProviderBlock/>
+          </div>
         </Box>
       </FadeIn>
     </Container>)
@@ -52,7 +54,7 @@ justify-content:center ;
 align-items:center ;
 `;
 const Box = styled.div`
-height:500px ;
+/* height:500px ; */
 width:650px ;
 display:flex ;
 align-items:center ;

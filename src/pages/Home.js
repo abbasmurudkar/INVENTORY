@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Inventory from '../components/DasboardList/Inventory'
@@ -12,6 +12,11 @@ import Sidebar from '../components/DASHBOARD/Sidebar'
 import ShowSymbol from '../components/DasboardList/SubFiles/ShowSymbol'
 
 const Home = () => {
+  const [add, setadd] = useState(0)
+  const addTocart = () =>{
+    setadd(add+1);
+    console.log(add)
+  }
 
   return (
     <MainBoard>
@@ -23,8 +28,8 @@ const Home = () => {
         <div className='Route'>
           <Switch>
             <Route path="/Dashboard">
-              <Route exact path="/Dashboard">
-                <Dashboard />
+              <Route exact path="/Dashboard" >
+                <Dashboard add={add} />
               </Route>
               <Route  path="/Dashboard/UserProfile">
                 <UserProfile />
@@ -36,13 +41,13 @@ const Home = () => {
                 <Stocks />
               </Route>
               <Route path="/Dashboard/News">
-                <StocksNews />
+                <StocksNews pageSize="9"/>
               </Route>
               <Route  path="/Dashboard/Orders">
                 <Orders />
               </Route>
               <Route  path="/Dashboard/Data/:id">
-                <ShowSymbol />
+                <ShowSymbol addTocart={addTocart}/>
               </Route>
             </Route>
           </Switch>

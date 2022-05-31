@@ -7,7 +7,7 @@ import { useModalState } from '../../../misc/Helper'
 import ProfileAvatar from '../../DASHBOARD/ProfileAvatar';
 
 function AvatarUploadBtn() {
-    const {profile} = useProfile()
+    const { profile } = useProfile()
     const fileInputTypes = ".png, .jpeg, .jpg"
     const acceptedFileTypes = ['image/png', 'image/jpeg', 'image/pjpeg'];
     const isValidFile = file => acceptedFileTypes.includes(file.type)
@@ -28,42 +28,42 @@ function AvatarUploadBtn() {
             }
         }
     }
-    const getBlob = (canvas)=>{
-        return new Promise((resolve, reject)=>{
-            canvas.toBlob((blob)=>{
-                if(blob){
+    const getBlob = (canvas) => {
+        return new Promise((resolve, reject) => {
+            canvas.toBlob((blob) => {
+                if (blob) {
                     resolve(blob)
                 }
-                else{
+                else {
                     reject(new Error('File Process Error'))
                 }
             })
         })
     }
-    const onUploadClick = async () =>{
+    const onUploadClick = async () => {
         const canvas = avatarEditorRef.current.getImageScaledToCanvas()
         setisLoading(true)
-        try{
-          const blob = await getBlob(canvas)
-          const avatarFileRef = storage.ref(`/profiles/${profile.uid}`).child('Avatar')
+        try {
+            const blob = await getBlob(canvas)
+            const avatarFileRef = storage.ref(`/profiles/${profile.uid}`).child('Avatar')
 
-          const UploadAvatarResult = await avatarFileRef.put(blob,{
-              cacheControl: `public, max-age-${3600 * 24 * 3}`
-          })
-          const downloadURL = await UploadAvatarResult.ref.getDownloadURL()
-          const userAvatarRef =  db.ref(`/profiles/${profile.uid}`).child('Avatar')
-          userAvatarRef.set(downloadURL)
-          setisLoading(false)
-          Alert.info("Avatar has been Uploaded", 4000)
-        }
-        catch(err){
+            const UploadAvatarResult = await avatarFileRef.put(blob, {
+                cacheControl: `public, max-age-${3600 * 24 * 3}`
+            })
+            const downloadURL = await UploadAvatarResult.ref.getDownloadURL()
+            const userAvatarRef = db.ref(`/profiles/${profile.uid}`).child('Avatar')
+            userAvatarRef.set(downloadURL)
             setisLoading(false)
-            Alert.error(err.message,4000)
+            Alert.info("Avatar has been Uploaded", 4000)
+        }
+        catch (err) {
+            setisLoading(false)
+            Alert.error(err.message, 4000)
         }
     }
     return (
         <div className='mt-3 text-center'>
-            <ProfileAvatar src={profile.Avatar} name={profile.Name} className="width-200 height-200 img-fullsize font-huge"/>
+            <ProfileAvatar src={profile.Avatar} name={profile.Name} className="width-200 height-200 img-fullsize font-huge" />
             <div>
                 <label htmlFor='avatar-upload' className='d-block cursor-pointer padded'>
                     <p style={{ fontSize: "16px", color: "grey", fontWeight: "normal" }} >Select new Avatar</p>
@@ -85,15 +85,15 @@ function AvatarUploadBtn() {
                     <Modal.Body>
                         <div className='d-flex justify-content-center align-items-center h-100'>
 
-                      {img &&  <AvatarEditor
-                      ref={avatarEditorRef}
-                            image={img}
-                            width={200}
-                            height={200}
-                            border={10}
-                            borderRadius={100}
-                            rotate={0}
-                        />}
+                            {img && <AvatarEditor
+                                ref={avatarEditorRef}
+                                image={img}
+                                width={200}
+                                height={200}
+                                border={10}
+                                borderRadius={100}
+                                rotate={0}
+                            />}
                         </div>
 
                     </Modal.Body>

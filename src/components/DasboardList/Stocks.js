@@ -79,7 +79,7 @@ padding:10px ;
 }
 .grid{
   display:grid ;
-  grid-template-columns:auto auto auto auto ;
+  grid-template-columns:auto auto auto  ;
   column-gap:-70px ;
   margin-top:40px;
   height:100% ;
