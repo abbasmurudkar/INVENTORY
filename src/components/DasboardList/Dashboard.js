@@ -7,7 +7,7 @@ import Carosuel from '../ADDTIONAL COMPONENT/Active-Carosuel';
 import { api_key, url } from '../Api';
 import axios from 'axios';
 
-const Dashboard = ({add}) => {
+const Dashboard = ({ add }) => {
   const [MostActive, setActive] = useState([])
   const [Losers, setLosers] = useState([])
   const [Gainers, setGainers] = useState([])
@@ -17,7 +17,7 @@ const Dashboard = ({add}) => {
     setisLoading(false)
   }, [])
 
- 
+
 
   const fetchData = () => {
     const active = `${url}stock_market/actives?${api_key}`;
@@ -42,7 +42,7 @@ const Dashboard = ({add}) => {
       <Dashboards>
         <Blocks>
           <Box>
-            <Boxes heading={"Orders"} icon={"angle-right"} add={add}/>
+            <Boxes heading={"Orders"} icon={"angle-right"} add={add} />
             <Boxes heading={"Buy Stocks"} icon={"angle-double-right"} />
             <Boxes heading={"Visitors"} icon={"people-group"} />
           </Box>

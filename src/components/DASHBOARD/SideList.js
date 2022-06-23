@@ -22,6 +22,7 @@ export default SideList
 const ListItem = styled.div`
  li{
      padding:15px 0 ;
+     list-style:none ;
     .list{
         color: white ;
         text-decoration:none ;
