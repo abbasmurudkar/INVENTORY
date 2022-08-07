@@ -80,7 +80,6 @@ background-color:white ;
 .menus-items2:hover .hide-show{
   display:flex ;
 }
-
 `;
 const Navs = styled.div`
 .hide-show{
